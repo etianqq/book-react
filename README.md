@@ -24,3 +24,5 @@ Gitbook: [https://etianqq.github.io/book-react/](https://etianqq.github.io/book-
 
 * `gitbook build`
 * `npm run deploy`
+
+电子书发布-参考 http://self-publishing.ebookchain.org/index.html

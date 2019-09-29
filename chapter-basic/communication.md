@@ -1,11 +1,17 @@
 #### 组件通信
 
-父子组件直接通信，主要靠```props```实现。
+概括的讲，可以有如下几种类型：
 
-* 父组件通过```props```向子组件传递数据和方法
-* 子组件触发事件，通过```props```上传递的事件，委托调用父组件函数，从而更新父组件状态值。
+| 通信类型 | 方式 | 
+| ------ | ------ | 
+| 父组件向子组件通信 | 通过props 向子组件传递需要的信息 | 
+| 子组件向父组件通信 | 1.利用回调函数</br> 2.自定义事件机制（eg: 发布/订阅模式）|
+| 跨级组件通信 | 1.通过props 向子组件传递需要的信息</br> 2.使用 context 来实现跨级父子组件间的通信 |
+| 没有嵌套关系的组件通信 | 自定义事件机制（eg: 发布/订阅模式） |
+| 适用于上述所有方式 | 利用数据管理框架：Redux|
 
-如果有更复杂的组件通信，需要使用[Redux](http://www.redux.org.cn/)。
+
+#### 1. 利用props
 
 看一个例子：
 子组件是一个```select```下拉框，内容由父组件定义。当下拉框变动时，下面一行文字会显示相应的选择内容。
@@ -61,3 +67,93 @@ ReactDOM.render(
 * ```handleSelect```：B组件触发onChange事件之后，会调用函数handleSelect，从而委托调用组件A的handleSelect方法，更新组件B状态值```this.setState({text: event.target.value});```。
 
 这样，父子组件就可以互相通信了。
+
+#### 2.Context
+
+** Context 提供了一个无需为每层组件手动添加 props，就能在组件树间进行数据传递的方法。**
+
+Context 设计目的是为了共享那些对于一个组件树而言是“全局”的数据，例如当前认证的用户、主题或首选语言。
+
+首先，定义Context Provider和Consumer:
+```
+import React, { createContext } from 'react';
+const Context = createContext();
+
+export class MyProvider extends React.Component {
+    constructor() {
+        super();
+        // 全局享用的状态值
+        this.state = {
+            isDebugger: process.env.NODE_ENV === 'development',
+            toggleLoading: false,
+            message: ''
+        };
+        this.updateContext = this.updateContext.bind(this);
+    }
+
+    // 为state添加新的属性或者修改原state的值
+    updateContext(newData) {
+        this.setState(Object.assign({}, this.state, newData));
+    }
+    
+    render() {
+        const contextData = { data: this.state };
+        const { toggleLoading, message } = contextData.data;
+        // 在state外层的对象contextData上添加属性updateContext，值为函数
+        Object.defineProperty(contextData, "updateContext", {
+            value: this.updateContext
+        });
+        // 显示全局消息提示框
+        if (message) {
+            setTimeout(() => this.setState({ message: '' }), 1000)
+        }
+        return (
+            <Context.Provider value={contextData}>
+                {this.props.children}
+                {toggleLoading && <Loading />}
+                {message && <Message text={message} />}
+            </Context.Provider>
+        );
+    }
+}
+
+// 消费组件
+export const MyConsumer = Component => {
+    return props => (
+        <Context.Consumer>
+            {context => {
+                return <Component context={context} {...props} />;
+            }}
+        </Context.Consumer>
+    );
+};
+```
+
+第二步，给根组件添加Provider
+
+```
+ReactDOM.render(
+    <MyProvider>
+        <App />
+    </MyProvider>,
+    document.getElementById('root'));
+```
+
+第三步，哪个组件需要全局Context，就用消费组件包装
+
+```
+class UserPage extends React.Component {
+
+    load(){
+        this.props.context.updateContext({ toggleLoading: true });
+        get()
+        .then(res=>{
+            this.props.context.updateContext({ toggleLoading: false });
+        })
+        .catch(error=>{
+            this.props.context.updateContext({ message: 'Error!' });
+        })
+    }
+}
+export default MyConsumer(injectIntl(UserPage));
+```
