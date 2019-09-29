@@ -1,3 +1,5 @@
+#### 组件通信
+
 父子组件直接通信，主要靠```props```实现。
 
 * 父组件通过```props```向子组件传递数据和方法
@@ -59,6 +61,3 @@ ReactDOM.render(
 * ```handleSelect```：B组件触发onChange事件之后，会调用函数handleSelect，从而委托调用组件A的handleSelect方法，更新组件B状态值```this.setState({text: event.target.value});```。
 
 这样，父子组件就可以互相通信了。
-
-####小结
-到了这里，react基础知识就介绍完了。可见，react框架涉及到的API和内置属性并不多，它的难点在于如何将一个UI界面合理分割为若干组件进行组合嵌套，并且，数据如何在组件间传递，变化。
