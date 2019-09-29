@@ -10,3 +10,5 @@
     * [6.组件通信](chapter-basic/communication.md)
     * [7.事件](chapter-basic/event.md)
 * [进阶篇](senior.md)
+    * [1.错误处理](chapter-senior/error.md)
+    * [2.高阶组件](chapter-senior/hoc.md)
