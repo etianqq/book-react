@@ -1,36 +1,14 @@
+#### 生命周期
+
 React的核心是组件，组件在创建和渲染的过程中，需要调用固定的钩子函数，也称为组件的“生命周期”。利用生命周期函数，可以做初始化工作，并在渲染过程中实现一些特定功能。
 
-####1. 生命周期函数
+** 类组件才有生命周期 **
 
-组件的整个生命周期会涉及如下函数：
+####1. React v16.3之前的生命周期函数
 
-|钩子函数	|　说明	
-| -- | -- |
-|getDefaultProps|设置props默认配置	|
-|getInitialState|设置state默认配置	|
-|componentWillMount|组件被注入DOM之前被调用	|
-|render|渲染组件时被调用	|
-|componentDidMount|组件被注入DOM之后被调用	|
-|componentWillReceiveProps|挂载的组件接收到新的props时被调用	|
-|shouldComponentUpdate|指定是否更新props和state	|
-|componentWillUpdate|更新组件时，渲染之前被调用	|
-|componentDidUpdate|更新组件时，渲染之后被调用	|
-|componentWillUnMount|卸载组件	|
-
-可以参考下图（来自网络）进一步了解整个流程。
-
-
-这里特殊说明两个方法：```getDefaultProps```和```getInitialState```。
-* 用```React.createClass()```函数创建组件，调用的是这两个钩子函数。
-* ES6类方法创建的组件，初始化```props```用的是静态属性```defaultProps```；初始化```state```是在构造函数```constructor```里做的。
-
-总结：
-* props更改时，会依次调用```componentWillReceiveProps -> shouldComponentUpdate -> componentWillUpdate -> render -> componentDidUpdate```；
-* state更改时，会依次调用```shouldComponentUpdate -> componentWillUpdate -> render -> componentDidUpdate```；
+![](/assets/react-lifecycle-old.png)
 
 ```
-小贴士
-
 shouldComponentUpdate 是一个非常重要的钩子函数，这个函数默认返回true。
 
 在React中，调用setState方法，React不会立即对其更新，而是将其标记为“脏”状态
@@ -44,7 +22,6 @@ shouldComponentUpdate 是一个非常重要的钩子函数，这个函数默认�
 ```
 下面，我们来看一个真实例子，观察组件生命周期的变换（采用ES6类模式）。
 
-####2. 组件实例
 ```
 class DangerButton extends React.Component {
     /*类型检查*/
@@ -153,7 +130,20 @@ componentDidUpdate-prevState:count:0
 ```
 可见，如果组件自身的state更新后（点击button，触发onClick事件），会依次执行```shouldComponentUpdate```,```componentWillUpdate```，```render```和```componentDidUpdate```函数。
 
-####小结
-在组件整个生命周期中，涉及到两种变量来传递/存储值，```prop```和```state```。那么，它们的使用场景是什么？有什么区别呢？下一节，我们将继续探索......
+####2. React v16.3之后的生命周期函数
 
-下一节：[React入门系列（五）props和state](http://www.jianshu.com/p/068ec3789dba)
+![](/assets/react-lifecycle-new.png)
+
+引入了两个新的生命周期函数：
+* `getDerivedStateFromProps`
+* `getSnapshotBeforeUpdate`
+
+deprecate了一组生命周期API：
+* `componentWillReceiveProps`
+* `componentWillMount`
+* `componentWillUpdate`
+
+
+getDerivedStateFromProps() 会在调用 render 方法之前调用，并且在初始挂载及后续更新时都会被调用。它应返回一个对象来更新 state，如果返回 null 则不更新任何内容。此方法适用于罕见的用例，即 state 的值在任何时候都取决于 props。慎用！
+
+getSnapshotBeforeUpdate() 在最近一次渲染输出（提交到 DOM 节点）之前调用。它使得组件能在发生更改之前从 DOM 中捕获一些信息（例如，滚动位置）。此生命周期的任何返回值将作为参数传递给 componentDidUpdate()。
