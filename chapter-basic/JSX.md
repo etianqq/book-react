@@ -28,8 +28,7 @@ var MyList = (
 * 可以通过数组的方式返回多个组件，每个数组项都必须有唯一属性`key`
 
 ```
-Demo:
-
+1. 利用<React.Fragment>组件
 return (
     <React.Fragment>
       Some text.
@@ -37,6 +36,7 @@ return (
     </React.Fragment>
   );
 }
+2. 返回数组类型
 return (
     [
         <Component1 key='1'>,
