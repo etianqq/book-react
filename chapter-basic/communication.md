@@ -5,8 +5,8 @@
 | 通信类型 | 方式 | 
 | ------ | ------ | 
 | 父组件向子组件通信 | 通过props 向子组件传递需要的信息 | 
-| 子组件向父组件通信 | 1.利用回调函数</br> 2.自定义事件机制（eg: 发布/订阅模式）|
-| 跨级组件通信 | 1.通过props 向子组件传递需要的信息</br> 2.使用 context 来实现跨级父子组件间的通信 |
+| 子组件向父组件通信 | 1.利用回调函数<br> 2.自定义事件机制（eg: 发布/订阅模式）|
+| 跨级组件通信 | 1.通过props 向子组件传递需要的信息<br> 2.使用 context 来实现跨级父子组件间的通信 |
 | 没有嵌套关系的组件通信 | 自定义事件机制（eg: 发布/订阅模式） |
 | 适用于上述所有方式 | 利用数据管理框架：Redux|
 
@@ -136,7 +136,7 @@ ReactDOM.render(
     <MyProvider>
         <App />
     </MyProvider>,
-    document.getElementById('root'));
+document.getElementById('root'));
 ```
 
 第三步，哪个组件需要全局Context，就用消费组件包装
@@ -145,6 +145,9 @@ ReactDOM.render(
 class UserPage extends React.Component {
 
     load(){
+        if (this.props.context.data.isDebugger) {
+            return;
+        }
         this.props.context.updateContext({ toggleLoading: true });
         get()
         .then(res=>{
@@ -155,5 +158,5 @@ class UserPage extends React.Component {
         })
     }
 }
-export default MyConsumer(injectIntl(UserPage));
+export default MyConsumer(UserPage);
 ```
