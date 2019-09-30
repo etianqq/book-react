@@ -40,7 +40,7 @@ return (
 return (
     [
         <Component1 key='1'>,
-        <Component1 key='2'>,
+        <Component2 key='2'>,
     ]
   );
 }

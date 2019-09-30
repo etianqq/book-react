@@ -144,6 +144,10 @@ deprecate了一组生命周期API：
 * `componentWillUpdate`
 
 
-getDerivedStateFromProps() 会在调用 render 方法之前调用，并且在初始挂载及后续更新时都会被调用。它应返回一个对象来更新 state，如果返回 null 则不更新任何内容。此方法适用于罕见的用例，即 state 的值在任何时候都取决于 props。慎用！
+** getDerivedStateFromProps()** 会在调用 render 方法之前调用，并且在初始挂载及后续更新时都会被调用。它应返回一个对象来更新 state，如果返回 null 则不更新任何内容。此方法适用于罕见的用例，即 state 的值在任何时候都取决于 props。慎用！
 
-getSnapshotBeforeUpdate() 在最近一次渲染输出（提交到 DOM 节点）之前调用。它使得组件能在发生更改之前从 DOM 中捕获一些信息（例如，滚动位置）。此生命周期的任何返回值将作为参数传递给 componentDidUpdate()。
+** getSnapshotBeforeUpdate()** 在最近一次渲染输出（提交到 DOM 节点）之前调用。它使得组件能在发生更改之前从 DOM 中捕获一些信息（例如，滚动位置）。此生命周期的任何返回值将作为参数传递给 componentDidUpdate()。
+
+#### 3. 嵌套组件的生命周期调用顺序
+
+![](/assets/components-lifecycle.png)
