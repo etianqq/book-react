@@ -9,6 +9,6 @@
     * [5.props和state](chapter-basic/props-state.md)
     * [6.组件通信](chapter-basic/communication.md)
     * [7.事件](chapter-basic/event.md)
-* [进阶篇](senior.md)
+* [进阶篇]()
     * [1.错误处理](chapter-senior/error.md)
     * [2.高阶组件](chapter-senior/hoc.md)
