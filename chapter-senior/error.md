@@ -5,8 +5,6 @@ Error boundaries 是 React 组件，它会在其子组件树中的任何位置�
 如果 class 组件定义了生命周期方法 `static getDerivedStateFromError()` 或 `componentDidCatch()` 中的任何一个（或两者），它就成为了 Error boundaries。
 
 1. `static getDerivedStateFromError(error)`: 适合处理降级渲染，在UI上显示错误视图。
-
-
 2. `componentDidCatch(error, info)`: 适合记录错误日志，比如上报服务端。
 
 例子如下：
