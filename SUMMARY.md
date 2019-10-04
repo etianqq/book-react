@@ -15,6 +15,7 @@
     * [3.diff算法](chapter-senior/diff.md)
     * [4.事务](chapter-senior/transaction.md)
     * [5.Fiber](chapter-senior/fiber.md)
+    * [5.React Hook](chapter-senior/hook.md)
 * [相关框架]()
     * [react-redux]()
     * [react-native]()
