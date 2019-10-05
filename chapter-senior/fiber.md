@@ -22,6 +22,19 @@
 
 ![](/assets/fiber1.png)
 
+fiber一个对象，表征reconciliation阶段所能拆分的最小工作单元，和下图中的react instance一一对应。
+
+![](/assets/fiber3.png)
+
+```
+fiber {
+    stateNode: {},// 管理Instance自身的特性
+    child: {}, //当前工作单元
+    sibling: {},//下一个工作单元
+    return: {},//处理完成后返回结果所要合并的目标，通常指向父节点
+}
+```
+
 #### React Fiber对生命周期的影响
 
 以前，生命周期钩子函数只会在一次更新操作中调用一次，但是V16之后，某些函数可就不仅仅只调用一次了。
