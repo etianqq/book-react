@@ -33,6 +33,16 @@ React 内置了一些像 useState 这样的 Hook。你也可以创建你自己�
 
 * useState
 * useEffect
+* useContext
+* useReducer
+* useCallback
+* useMemo
+* useRef
+* useImperativeHandle
+* useLayoutEffect
+* useDebugValue
+
+下面只介绍前两种Hook。
 
 #### State Hook
 
