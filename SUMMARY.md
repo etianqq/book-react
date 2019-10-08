@@ -16,6 +16,7 @@
     * [4.事务](chapter-senior/transaction.md)
     * [5.Fiber](chapter-senior/fiber.md)
     * [6.React Hook](chapter-senior/hook.md)
+    * [7.React 组件的性能优化](chapter-senior/performance-optimization.md)
 * [相关框架]()
     * [redux](chapter-framework/redux.md)
     * [react-native](chapter-framework/native.md)

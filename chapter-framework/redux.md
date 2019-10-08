@@ -13,7 +13,7 @@ redux 三大原则：
 * 状态只读：不允许直接修改状态（必须通过 dispatch action来修改状态）
 * 纯函数reducer：状态修改为一个纯函数（接受一定的输入，必定会得到一定的输出）完成。
 
-#### Redux核心API
+#### 1. Redux核心API
 
 Redux的核心是一个store - 存储状态。
 
@@ -31,11 +31,11 @@ store是一个对象，包含4个方法：
 
 我们只需要关注 getState() 和 dispatch(action) 即可。
 
-#### 与React绑定使用
+#### 2. 与React绑定使用
 
 使用`react-redux`库。
 
-#### Redux middleware
+#### 3. Redux middleware
 
 Redux 提供了 `applyMiddleware`方法来加载 middleware。
 
@@ -115,3 +115,75 @@ const getThenShow = (dispatch, getState) =>{
         })
 }
 ```
+
+#### 4. Redux性能优化
+
+1) 使用react-redux
+
+在使用react-redux的connect函数时，实际上产生了一个无名的React组件类，这个类定制了shouldComponentUpdate函数的实现，实现逻辑时对比这次传递给内层傻瓜组件的props和上次的props。如果props没有变化，那内层组件无需再次渲染。
+
+```
+import {connect} from 'react-redux';
+
+const Foo = ({text})=>(
+    <div>{text}</div>
+)
+
+const mapStateToProps = (state)=> (
+    text: state.text
+)
+
+// connect函数返回了一个容器组件，会实现shouldComponentUpdate函数，判断这次的text和上一次text的值是否相等。
+export default connect(mapStateToProps)(Foo);
+```
+
+connect函数中采用浅比较，即 value1 == value2
+
+
+2）用reselect提高数据获取性能
+
+工作原理：只要相关状态没有改变，就直接使用上一次的缓存结果。
+
+reselect把计算过程分为两个步骤：
+
+**步骤1**: 从输入参数state抽取第一层结果，第一层结果和之前抽取的第一层结果做比较（===比较），如果发现完全相同，就不会进入第二步计算，选择器直接把之前第二部分的运输结果返回。
+
+**步骤2**: 根据第一层结果计算出选择权需要返回的最终结果。
+
+定义选择器：
+```
+import { createSelector } from 'reselect'
+
+const getVisibilityFilter = (state) => state.visibilityFilter
+const getTodos = (state) => state.todos
+
+export const getVisibleTodos = createSelector(
+  [ getVisibilityFilter, getTodos ],
+  (visibilityFilter, todos) => {
+    switch (visibilityFilter) {
+      case 'SHOW_ALL':
+        return todos
+      case 'SHOW_COMPLETED':
+        return todos.filter(t => t.completed)
+      case 'SHOW_ACTIVE':
+        return todos.filter(t => !t.completed)
+    }
+  }
+)
+```
+
+使用新定义的选择器：
+
+```
+import {getVisibleTodos} from './selector.js'
+
+const mapStateToProps = (state) => {
+    return {
+        todos: getVisibleTodos(state);
+    }
+}
+```
+
+3）Immutable Redux
+
+持久化数据结构，结构共享，惰性操作
