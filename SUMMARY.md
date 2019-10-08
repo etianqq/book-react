@@ -17,5 +17,5 @@
     * [5.Fiber](chapter-senior/fiber.md)
     * [6.React Hook](chapter-senior/hook.md)
 * [相关框架]()
-    * [react-redux]()
-    * [react-native]()
+    * [redux](chapter-framework/redux.md)
+    * [react-native](chapter-framework/native.md)
