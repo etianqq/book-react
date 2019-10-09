@@ -186,4 +186,6 @@ const mapStateToProps = (state) => {
 
 3）Immutable Redux
 
-持久化数据结构，结构共享，惰性操作
+持久化数据结构，结构共享，惰性操作。
+
+通过Immutable.js创建的对象在任何情况下都无法被修改，这样可以防止由于开发者的粗心导致直接修改Redux的state。
