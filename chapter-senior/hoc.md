@@ -31,13 +31,18 @@ function addNewProps(WrappedComponent, newProps) {
 
 #### 2.继承式高阶组件
 
+继承式高阶组件常用于渲染劫持，例如，当用户处于登陆状态时，允许组件渲染；否则渲染一个空组件。
+
 ```
-// 重写上面的例子
-function addNewProps(WrappedComponent, newProps) {
+function withAuth(WrappedComponent, newProps) {
     return class WrappingComponent extends WrappedComponent {
         render(){
-            this.props = {...this.props, ...newProps}
-            return super.render();
+            if (this.props.loggedIn) {
+                this.props = {...this.props, ...newProps}
+                return super.render();
+            } else {
+                return null;
+            }
         }
     }
 }
@@ -74,10 +79,24 @@ class AddUserProp extends React.Component {
 
 因为子组件是函数，所以这种模式非常灵活。
 
-#### MixIn
+#### 4. MixIn
 
 应用场景：只能在React.createClass方式创建的组件类中使用，不能通过ES6 Class创建的组件中使用。
 
 MixIn是一种反模式的设计，它可以继承多个组件，包括其内部状态state。所以，很容易造成state混乱，官方不建议使用。
+
+#### 5. 注意事项
+
+1. 不要在组件的render中使用高阶组件。因为调用高阶组件，每次都会返回一个新组件，所以，每次render，前一次高阶组件创建的组件都会被卸载，然后重新挂载，既影响效率，有丢失了组件及其子组件的状态。**高阶组件适合在组件外部使用**。
+```
+// 不好的应用场景
+render(){
+    // 每次render，enhance都会创建一个新组件，尽管被包装组件没有变化
+    const EnhancedComponent = enhance(MyComponent);
+    // 因为是新组件，所以会经历旧组件的卸载和新组件的重新挂载
+    return <EnhancedComponent />
+}
+```
+2. 高阶组件和父组件很类似。区别在于：**高阶组件是一个函数，关注逻辑；父组件是一个组件，关注UI/DOM。**如果逻辑和DOM不相关（如数据校验，请求发送等），那么这部分逻辑适合放在高阶组件里。
 
 
