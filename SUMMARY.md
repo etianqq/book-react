@@ -21,4 +21,5 @@
 * [相关框架]()
     * [react-router](chapter-framework/react-router.md)
     * [redux](chapter-framework/redux.md)
+    * [MobX](chapter-framework/mobx.md)
     * [react-native](chapter-framework/native.md)
