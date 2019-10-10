@@ -6,14 +6,6 @@
 
 Gitbook: [https://etianqq.github.io/book-react/](https://etianqq.github.io/book-react/)
 
-其他书籍：
-
-* [Javascript简明讲义](https://etianqq.github.io/book-jstips/)
-* [HTTP讲义](https://etianqq.github.io/book-http/)
-* [Node讲义](https://etianqq.github.io/book-node/)
-* [VUE2.0讲义](https://etianqq.github.io/book-vue2/)
-* [Angular 1.0讲义](https://etianqq.github.io/book-angular/)
-
 #### Debug
 
 * `gitbook build`
