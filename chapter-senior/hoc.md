@@ -53,16 +53,16 @@ function withAuth(WrappedComponent, newProps) {
 2. 可以对原组件的props进行增强或者删减
 3. 渲染方式为 - `return super.render();`
 
-#### 3. 函数式子组件
+#### 3. render prop 模式
 
 前面两种高阶组件都会操作`props`，通过增减`props`而改变原组件功能。
 
-函数式子组件不会操作组件的`props`，但是，它的硬性要求是：
+render prop 模式不会操作组件的`props`，但是，它的硬性要求是：
 1. 父组件必须有子组件
 2. 子组件必须为函数
 
 如下面的例子：
-```
+```javascript
 // 定义组件
 class AddUserProp extends React.Component {
     render(){
@@ -78,6 +78,34 @@ class AddUserProp extends React.Component {
 ```
 
 因为子组件是函数，所以这种模式非常灵活。
+
+顺着这个方式往下扩展，我们可以发现，这种父组件并没有创建出新的组件，而是将props属性向注入到原组件内。
+这种设计模式就是“**依赖注入**”。当A依赖B时，并不要将A直接依赖B，而是将B以接口的形式传递给A（通过函数）。
+所以，我们也可以让父组件不包含子组件，直接将通过props函数来渲染组件。
+
+```javascript
+const Auth(props) {
+   const user = getUser();
+   if (user.login){
+      const allProps = {...user, ...props};
+      return (
+        <React.Fragment>
+          {props.login(allProps)}
+        </React.Fragment> )
+   } else {
+       return (
+        <React.Fragment>
+          {props.nologin(props)}
+        </React.Fragment> )
+   }
+}
+
+// usage
+<Auth
+   login={props=><Login ...props/>}>
+   nologin={props=><NoLogin ...props/>}
+/>
+```
 
 #### 4. MixIn
 

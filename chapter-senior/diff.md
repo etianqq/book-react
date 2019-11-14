@@ -8,11 +8,11 @@ Virtual Dom配合高效的diff算法，才能够快速的渲染改动的页面�
 
 策略：针对节点进行比较。不同层级的节点，只有创建和删除操作。
 
-** 影响性能操作，建议不要进行DOM 节点跨层级的操作。**
+**影响性能操作，建议不要进行DOM 节点跨层级的操作**。
 
 图示如下（`create A →create B →create C →delete A`）：
 
-![](/assets/diff-1.png)
+![](../assets/diff-1.png)
 
 #### 2. 同层级父节点移动
 
@@ -21,7 +21,7 @@ Virtual Dom配合高效的diff算法，才能够快速的渲染改动的页面�
 2. 不同类型组件：直接判断为dirty component，从而替换整个组件下的所有子节点
 
 图示如下：
-![](/assets/diff-2.png)
+![](../assets/diff-2.png)
 
 #### 3. 同层级子节点移动
 

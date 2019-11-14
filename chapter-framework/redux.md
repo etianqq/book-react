@@ -4,7 +4,7 @@ redux是参考Flux设计原则的一个管理数据流的库。
 
 下图为redux的核心运作流程
 
-![](/assets/redux.png)
+![](../assets/redux.png)
 
 
 redux 三大原则： 
@@ -79,7 +79,7 @@ let newStore = applyMiddleware(mid1, mid2, mid3, ...)(createStore)(reducer, null
 * 在middleware中调用next()，可以进入下一个middleware
 * 在middleware中调用store.dispatch()，会跳出middleware流，重新开始。
 
-![](/assets/redux.jpg)
+![](../assets/redux.jpg)
 
 如上图，分发一个action时，middleware通过next(action)一层层处理和传递action到Redux原生的dispatch。
 
@@ -189,3 +189,30 @@ const mapStateToProps = (state) => {
 持久化数据结构，结构共享，惰性操作。
 
 通过Immutable.js创建的对象在任何情况下都无法被修改，这样可以防止由于开发者的粗心导致直接修改Redux的state。
+
+#### 5. 合理 connect 场景
+
+在使用 Redux 时，我们搭配 React-redux 来对组件和数据进行联通（connect），一个常陷入的误区就是滥用connect，而没有进行更合理的设计分析。也可能只在顶层进行了 connect 设计，然后再一层层进行数据传递。
+
+如果只对 Page 这个顶层组件进行 connect 设计，其他组件的数据依靠 Page 组件进行分发，则设计如图所示：
+
+![](https://images.gitbook.cn/693a18c0-9b43-11e9-a438-01dafdf3f255)
+
+这样做存在的问题如下：
+
+  * 当改动 Profile 组件中的用户头像时，由于数据变动整个 Page 组件都会重新渲染；
+  * 当删除 Feeds 组件中的一条信息时，整个 Page 组件也都会重新渲染；
+  * 当在 Images 组件中添加一张图片时，整个 Page 组件同样都会重新渲染。
+
+因此，更好的做法是对 Profile、Feeds、Images 这三个组件分别进行 connect 设计，在 connect 方法中使用
+mapStateToProps 筛选出不同组件关心的 state 部分，如图所示：
+
+![](https://images.gitbook.cn/893fa890-9b45-11e9-9465-a7e3d006cf60)
+
+这样做的好处很明显：
+
+  * 当改动 Profile 组件中的用户头像时，只有 Profile 组件重新渲染；
+  * 当删除 Feeds 组件中的一条信息时，只有 Feed 组件重新渲染；
+  * 当在 Images 组件中添加一张图片时，只有 Images 组件重新渲染。
+
+#### 

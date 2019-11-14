@@ -8,7 +8,7 @@
 
 React中的事务-Transaction就是一个包装函数，函数被包装为一个个wrapper，其中每个wrapper都有两个方法：`initialize`与`close`。当执行方法时，需要执行事务的`perform`方法。`perform`方法会首先一次执行wrapper的`initialize`，然后执行函数本身，最后执行wrapper的`close`方法。
 
-![](/assets/transaction.png)
+![](../assets/transaction.png)
 
 #### 2. 从setState看事务的应用
 
@@ -106,7 +106,7 @@ var ReactUpdates = {
 
 截止到此，setState流程如下：
 
-![](/assets/transaction1.png)
+![](../assets/transaction1.png)
 
 
 4）`batchingStrategy`是干什么的？看一下该对象类型`ReactDefaultBatchingStrategy`的定义。
@@ -169,7 +169,7 @@ var transaction = new ReactDefaultBatchingStrategyTransaction();
 
 由此，在上图中添加`batchedUpdates`中的事务操作后，流程图如下：
 
-![](/assets/transaction2.png)
+![](../assets/transaction2.png)
 
 #### 2.再回头看看我们之前的问题
 

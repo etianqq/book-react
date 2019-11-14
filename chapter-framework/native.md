@@ -2,7 +2,7 @@
 
 RN 这套框架让 JS开发者可以大部分使用JS代码就可以构建一个跨平台APP。 Facebook官方说法是learn once, run everywhere， 即在android 、 ios、 Browser各个平台，程序画UI和写逻辑的方式都大致相同。因为JS 可以动态加载，从而理论上可以做到write once, run everywhere， 当然要做额外的适配处理。如图：
 
-![](/assets/rn1.png)
+![](../assets/rn1.png)
 
 #### 运行原理
 
@@ -34,7 +34,7 @@ Objective-C 创建了一个单独的线程，这个线程只用于执行 JavaScr
 1. **寻找Native Method:** 在 Objective-C 和 JavaScript 两端都保存了一份配置表(OC端和JS端分别各有一个bridge，两个bridge都保存了同样一份模块配置表)，里面标记了所有 Objective-C 暴露给 JavaScript 的模块和方法。这样，无论是哪一方调用另一方的方法，实际上传递的数据只有 ModuleId、MethodId 和 Arguments 这三个元素，它们分别表示类、方法和方法参数，当 Objective-C 接收到这三个值后，就可以通过 runtime 唯一确定要调用的是哪个函数，然后调用这个函数。
 2. **执行 JavaScript 回调:** 在 JavaScript 调用 Objective-C 代码时，注册要回调的 Block，并且把 BlockId 作为参数发送给 Objective-C，Objective-C 收到参数时会创建 Block，调用完 Objective-C 函数后就会执行这个刚刚创建的 Block。Objective-C 会向 Block 中传入参数和 BlockId，然后在 Block 内部调用 JavaScript 的方法，随后 JavaScript 查找到当时注册的 Block 并执行
 
-![](/assets/rn2.png)
+![](../assets/rn2.png)
 
 例如-`(void)select:(int)index response:(RCTResponseSenderBlock)callback` 这个方法，拿到两个参数的类型为int,block，JS传过来的两个参数类型是NSNumber,NSString(CallbackID)，这时会把NSNumber转为int，NSString(CallbackID)转为一个block，block的内容是把回调的值和CallbackID传回给JS。
 

@@ -1,9 +1,9 @@
 #### React Hook
 
-** Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。**
+**Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。**
 
 例子：
-```
+```javascript
 import React, { useState } from 'react';
 
 function Example() {
@@ -50,7 +50,7 @@ React 内置了一些像 useState 这样的 Hook。你也可以创建你自己�
 
 `useState`的每次调用都有一个完全独立的 state —— 因此你可以在单个组件中多次调用同一个自定义 Hook。如下：
 
-```
+```javascript
 // 声明多个 state 变量！
 const [age, setAge] = useState(42);
 const [fruit, setFruit] = useState('banana');
@@ -61,7 +61,7 @@ const [todos, setTodos] = useState([{ text: 'Learn Hooks' }]);
 
 ##### 1.声明 State 变量
 
-```
+```javascript
 import React, { useState } from 'react';
 
 function Example() {
@@ -72,12 +72,12 @@ function Example() {
 
 ##### 2.读取 State
 
-```
+```javascript
  <p>You clicked {count} times</p>
 ```
 
 ##### 3.更新 State
-```
+```javascript
 <button onClick={() => setCount(count + 1)}>
     Click me
 </button>
@@ -90,7 +90,7 @@ function Example() {
 1. 在title上面显示点击次数
 2. 订阅好友在线状态，并在实现取消订阅功能
 
-```
+```react
 import React, { useState, useEffect } from 'react';
 
 function Example() {
@@ -140,7 +140,7 @@ function Example() {
 
 如果是componentDidUpdate，我们会利用prevProps 或 prevState：
 
-```
+```react
 componentDidUpdate(prevProps, prevState) {
   if (prevState.count !== this.state.count) {
     document.title = `You clicked ${this.state.count} times`;
@@ -149,7 +149,7 @@ componentDidUpdate(prevProps, prevState) {
 ```
 useEffect中，我们只要在该API中传入第二个数组参数即可：
 
-```
+```javascript
 useEffect(() => {
   document.title = `You clicked ${count} times`;
 }, [count]); // 仅在 count 更改时更新
@@ -171,4 +171,6 @@ useEffect(() => {
 ##### 提示
 
 与 componentDidMount 或 componentDidUpdate 不同，使用 useEffect 调度的 effect 不会阻塞浏览器更新屏幕，这让你的应用看起来响应更快。大多数情况下，effect 不需要同步地执行。
+
+useEffect 声明的回调函数会在组件挂载、更新、卸载的时候执行。为了避免每次渲染都执行所有的 useEffect 回调，useEffect提供了第二个参数，该参数是数组类型。只有在渲染时数组中的值发生了变化，才会执行该 useEffect回调。**如果传的是个空数组，也就是说并不依赖任何其它值，因此这样只会在组件第一次 Mount 后和 Unmount 前调用。**
 

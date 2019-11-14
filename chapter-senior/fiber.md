@@ -1,6 +1,6 @@
 #### React Fiber
 
-** “React Fiber是对核心算法的一次重新实现” **
+**“React Fiber是对核心算法的一次重新实现” **
 
 在V16之前，React的更新过程是同步的，这可能会导致性能问题。
 
@@ -20,11 +20,11 @@
 
 有了分片之后，更新过程的调用栈如下图所示，中间每一个波谷代表深入某个分片的执行过程，每个波峰就是一个分片执行结束交还控制权的时机。
 
-![](/assets/fiber1.png)
+![](../assets/fiber1.png)
 
 fiber一个对象，表征reconciliation阶段所能拆分的最小工作单元，和下图中的react instance一一对应。
 
-![](/assets/fiber3.png)
+![](../assets/fiber3.png)
 
 ```
 fiber {
@@ -51,7 +51,7 @@ fiber {
     * componentDidUpdate
     * componentWillUnmount
 
-![](/assets/fiber2.png)
+![](../assets/fiber2.png)
 
 比如说，一个低优先级的任务A正在执行，已经调用了某个组件的componentWillUpdate函数，接下来发现自己的时间分片已经用完了，于是冒出水面，看看有没有紧急任务，哎呀，真的有一个紧急任务B，接下来React Fiber就会去执行这个紧急任务B，任务A虽然进行了一半，但是没办法，只能完全放弃，等到任务B全搞定之后，任务A重头来一遍，也就是说，componentWillUpdate函数会被再调用一次。
 

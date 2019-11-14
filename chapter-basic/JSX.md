@@ -62,10 +62,10 @@ var MyList = (
 
 先讲述下两种元素在处理属性时的不同之处。
 
-|属性	|　DOM元素	| 组件元素
-| -- | -- |-- | 
-|自定义	|需要加```data-```前缀。如：```<h1 data-attr="xxx"></h1>```	|可以随意定义属性名称|
-|class和for|因为这两个名字为JavaScript关键字，因此需要转换为```className```和```htmlFor```之后再使用	|可以直接使用该属性名|
+| 属性       | DOM元素                                                      | 组件元素             |
+| ---------- | ------------------------------------------------------------ | -------------------- |
+| 自定义     | 需要加```data-```前缀。如：```<h1 data-attr="xxx"></h1>```   | 可以随意定义属性名称 |
+| class和for | 因为这两个名字为JavaScript关键字，因此需要转换为```className```和```htmlFor```之后再使用 | 可以直接使用该属性名 |
 
 然后分析一下两种元素处理属性时相同之处。
 
@@ -77,6 +77,7 @@ var MyList = (
 
 (2) 展开属性
 使用“展开属性”来定义全部属性。如果元素属性特别多，建议采用这种格式。
+
 ```
 const data = {name: 'button', value='1' text='it is a button'};
 let component = <Component name={data.name} value={data.value} text={data.text} />
@@ -84,8 +85,9 @@ let component = <Component name={data.name} value={data.value} text={data.text} 
 let component = <Component {...data} />
 ```
 
-(3) dangerouslySetInnerHTML属性 
+(3) `dangerouslySetInnerHTML`属性 
 React会将所有显示在DOM中的字符串转义，防止XSS攻击。如果组件子元素为HTML，那么，可以通过```dangerouslySetInnerHTML```属性设置。
+
 ```
 var MyList = (
 <ul>

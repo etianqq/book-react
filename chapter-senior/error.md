@@ -39,3 +39,14 @@ class ErrorBoundary extends React.Component {
   }
 }
 ```
+
+如果了解React Fiber，就应该知道，V16版本之后，React生命周期分为两个阶段：
+
+- Render Frase
+- Commit Frase
+
+两个阶段的分界岭是`render`函数。
+第一阶段生命周期函数可能会被重复调用；而一旦进入第二阶段，代码会一气呵成执行完毕。
+
+如果异常发生在第一阶段，调用`getDerivedStateFromError`，如果异常发生在第二阶段，调用`componentDidCatch`。所以，`getDerivedStateFromError`适合显示UI错误组件，后者由于在`render`之后调用，适合处理非UI操作，如错误上报。
+

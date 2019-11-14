@@ -18,7 +18,7 @@ props是properties的缩写，顾名思义，就是属性变量。**props用于�
 
 下面是一个简单的例子（在Input里面输入任意字符，点击button，会将输入的文字显示在Input框下部，用```<li>```标签显示）。
 
-![](/assets/state-1.webp)
+![](../assets/state-1.webp)
 
 ```
 class Dashboard extends React.Component {

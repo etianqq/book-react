@@ -16,7 +16,7 @@
 看一个例子：
 子组件是一个```select```下拉框，内容由父组件定义。当下拉框变动时，下面一行文字会显示相应的选择内容。
 
-![](/assets/communication-1.webp)
+![](../assets/communication-1.webp)
 
 
 ```
