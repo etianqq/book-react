@@ -22,10 +22,10 @@
 
 * 尽量把style提到组件之外，不要直接写在JSX里面。因为如果style里直接定义样式对象，会导致组件每次渲染都要创建一个新的style对象。
 
-    ```javascript
+```
     // bad
     render(){
-    	return (<div style={{color: 'red'}}>hello</div>)
+    	return (<div style={{color: "red"}}>hello</div>)
     }
     // good
     const style = {color: 'red'}
@@ -33,34 +33,34 @@
     render(){
     	return (<div>hello</div>)
     }
-    ```
+```
 
 * 利用`shouldComponentUpdate`定义更新条件
 
     * 适当时使用`React.PureComponent`，其自带`shouldComponentUpdate`优化，会对props进行浅比较。
 
-        ```javascript
+```
         class Comp extends React.Component {
          	render(){
         		return (<div>{this.props.name}</div>)
         	}
         }
-        ```
+```
 
     * 函数组件可以利用`React.memo`实现`shouldComponentUpdate`优化，同样是浅比较。
 
-        ```javascript
+```
         const MyComponent = React.memo(props => {
           /* render using props */
           return (
             <div>{props.name}</div>
           );
         });
-        ```
+```
 
 * 利用`useMemo`缓存复杂计算的值，利用`useCallback`缓存函数
 
-    ```javascript
+```
     // useMemo
     // 使用useMemo来执行昂贵的计算，然后将计算值返回，并且将count作为依赖值传递进去。
     // 这样，就只会在count改变的时候触发expensive执行，在修改val的时候，返回上一次缓存的值。
@@ -116,12 +116,13 @@
             {count}
         </div>
     }
-    ```
+```
 
 * React官方建议把state当作不可变对象。当组件的状态都是不可变对象时，`shouldComponentUpdate`只需**浅比较**就可以判断状态是否真的改变，从而避免不必要的render调用。
     * 状态类型是不可变类型 - number, string, boolean, null, undefined
     * 状态类型是array，创建新的数组返回（concat, slice, filter, map 会返回一个新数组）：
-       ```javascript
+       
+```
        // add
        this.setState({
            books: [...preState.books, 'New book']
@@ -134,9 +135,9 @@
        this.setState({
            books: preState.books.filter(item=>item !== 'React)
        })
-       ```
+```
     * 状态类型是object，创建新的对象返回（Object.assign，对象扩展语法，或者Immutable库）
-        ```javascript
+```
         this.setState({
            owner: Object.assgin({}, preState.owner, {name: 'Jason'})
        })
@@ -144,5 +145,5 @@
         this.setState({
             owner: {...preState.owner, name: 'Jason'}
         })
-       ```
+```
     
