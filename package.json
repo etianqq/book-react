@@ -1,8 +1,8 @@
 {
   "name": "book-react2",
   "version": "1.0.0",
-  "description": "####Node.js不是JS应用、而是JS运行平台",
-  "main": "gulpfile.js",
+  "description": "react training",
+  "main": "index.js",
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-gh-pages": "^0.5.4"
