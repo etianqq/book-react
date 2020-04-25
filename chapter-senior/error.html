@@ -1,0 +1,572 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.错误处理 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="hoc.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../basic.html">
+            
+                <a href="../basic.html">
+            
+                    
+                    基础篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter-basic/intro.html">
+            
+                <a href="../chapter-basic/intro.html">
+            
+                    
+                    1.基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter-basic/JSX.html">
+            
+                <a href="../chapter-basic/JSX.html">
+            
+                    
+                    2.JSX语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter-basic/component.html">
+            
+                <a href="../chapter-basic/component.html">
+            
+                    
+                    3.创建组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter-basic/lifecycle.html">
+            
+                <a href="../chapter-basic/lifecycle.html">
+            
+                    
+                    4.生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../chapter-basic/props-state.html">
+            
+                <a href="../chapter-basic/props-state.html">
+            
+                    
+                    5.props和state
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../chapter-basic/communication.html">
+            
+                <a href="../chapter-basic/communication.html">
+            
+                    
+                    6.组件通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../chapter-basic/event.html">
+            
+                <a href="../chapter-basic/event.html">
+            
+                    
+                    7.事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    进阶篇
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="error.html">
+            
+                <a href="error.html">
+            
+                    
+                    1.错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="hoc.html">
+            
+                <a href="hoc.html">
+            
+                    
+                    2.高阶组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="diff.html">
+            
+                <a href="diff.html">
+            
+                    
+                    3.diff算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="transaction.html">
+            
+                <a href="transaction.html">
+            
+                    
+                    4.事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="fiber.html">
+            
+                <a href="fiber.html">
+            
+                    
+                    5.Fiber
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="hook.html">
+            
+                <a href="hook.html">
+            
+                    
+                    6.React Hook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="performance-optimization.html">
+            
+                <a href="performance-optimization.html">
+            
+                    
+                    7.性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="isomorphic.html">
+            
+                <a href="isomorphic.html">
+            
+                    
+                    8.同构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    相关框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter-framework/react-router.html">
+            
+                <a href="../chapter-framework/react-router.html">
+            
+                    
+                    react-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter-framework/redux.html">
+            
+                <a href="../chapter-framework/redux.html">
+            
+                    
+                    redux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter-framework/mobx.html">
+            
+                <a href="../chapter-framework/mobx.html">
+            
+                    
+                    MobX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter-framework/native.html">
+            
+                <a href="../chapter-framework/native.html">
+            
+                    
+                    react-native
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1.错误处理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h4 id="&#x9519;&#x8BEF;&#x5904;&#x7406;">&#x9519;&#x8BEF;&#x5904;&#x7406;</h4>
+<p>Error boundaries &#x662F; React &#x7EC4;&#x4EF6;&#xFF0C;&#x5B83;&#x4F1A;&#x5728;&#x5176;&#x5B50;&#x7EC4;&#x4EF6;&#x6811;&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x4F4D;&#x7F6E;&#x6355;&#x83B7; JavaScript &#x9519;&#x8BEF;&#xFF0C;&#x5E76;&#x8BB0;&#x5F55;&#x8FD9;&#x4E9B;&#x9519;&#x8BEF;&#xFF0C;&#x5C55;&#x793A;&#x964D;&#x7EA7; UI &#x800C;&#x4E0D;&#x662F;&#x5D29;&#x6E83;&#x7684;&#x7EC4;&#x4EF6;&#x6811;&#x3002;Error boundaries &#x7EC4;&#x4EF6;&#x4F1A;&#x6355;&#x83B7;&#x5728;&#x6E32;&#x67D3;&#x671F;&#x95F4;&#xFF0C;&#x5728;&#x751F;&#x547D;&#x5468;&#x671F;&#x65B9;&#x6CD5;&#x4EE5;&#x53CA;&#x5176;&#x6574;&#x4E2A;&#x6811;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E2D;&#x53D1;&#x751F;&#x7684;&#x9519;&#x8BEF;&#x3002;</p>
+<p>&#x5982;&#x679C; class &#x7EC4;&#x4EF6;&#x5B9A;&#x4E49;&#x4E86;&#x751F;&#x547D;&#x5468;&#x671F;&#x65B9;&#x6CD5; <code>static getDerivedStateFromError()</code> &#x6216; <code>componentDidCatch()</code> &#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#xFF08;&#x6216;&#x4E24;&#x8005;&#xFF09;&#xFF0C;&#x5B83;&#x5C31;&#x6210;&#x4E3A;&#x4E86; Error boundaries&#x3002;</p>
+<ol>
+<li><code>static getDerivedStateFromError(error)</code>: &#x9002;&#x5408;&#x5904;&#x7406;&#x964D;&#x7EA7;&#x6E32;&#x67D3;&#xFF0C;&#x5728;UI&#x4E0A;&#x663E;&#x793A;&#x9519;&#x8BEF;&#x89C6;&#x56FE;&#x3002;</li>
+<li><code>componentDidCatch(error, info)</code>: &#x9002;&#x5408;&#x8BB0;&#x5F55;&#x9519;&#x8BEF;&#x65E5;&#x5FD7;&#xFF0C;&#x6BD4;&#x5982;&#x4E0A;&#x62A5;&#x670D;&#x52A1;&#x7AEF;&#x3002;</li>
+</ol>
+<p>&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    // &#x66F4;&#x65B0; state &#x4F7F;&#x4E0B;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x964D;&#x7EA7; UI
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, info) {
+    // &quot;&#x7EC4;&#x4EF6;&#x5806;&#x6808;&quot; &#x4F8B;&#x5B50;:
+    //   in ComponentThatThrows (created by App)
+    //   in ErrorBoundary (created by App)
+    //   in div (created by App)
+    //   in App
+    logComponentStackToMyService(info.componentStack);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      // &#x4F60;&#x53EF;&#x4EE5;&#x6E32;&#x67D3;&#x4EFB;&#x4F55;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x964D;&#x7EA7; UI
+      return &lt;h1&gt;Something went wrong.&lt;/h1&gt;;
+    }
+
+    return this.props.children; 
+  }
+}
+</code></pre><p>&#x5982;&#x679C;&#x4E86;&#x89E3;React Fiber&#xFF0C;&#x5C31;&#x5E94;&#x8BE5;&#x77E5;&#x9053;&#xFF0C;V16&#x7248;&#x672C;&#x4E4B;&#x540E;&#xFF0C;React&#x751F;&#x547D;&#x5468;&#x671F;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x9636;&#x6BB5;&#xFF1A;</p>
+<ul>
+<li>Render Frase</li>
+<li>Commit Frase</li>
+</ul>
+<p>&#x4E24;&#x4E2A;&#x9636;&#x6BB5;&#x7684;&#x5206;&#x754C;&#x5CAD;&#x662F;<code>render</code>&#x51FD;&#x6570;&#x3002;
+&#x7B2C;&#x4E00;&#x9636;&#x6BB5;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x53EF;&#x80FD;&#x4F1A;&#x88AB;&#x91CD;&#x590D;&#x8C03;&#x7528;&#xFF1B;&#x800C;&#x4E00;&#x65E6;&#x8FDB;&#x5165;&#x7B2C;&#x4E8C;&#x9636;&#x6BB5;&#xFF0C;&#x4EE3;&#x7801;&#x4F1A;&#x4E00;&#x6C14;&#x5475;&#x6210;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5F02;&#x5E38;&#x53D1;&#x751F;&#x5728;&#x7B2C;&#x4E00;&#x9636;&#x6BB5;&#xFF0C;&#x8C03;&#x7528;<code>getDerivedStateFromError</code>&#xFF0C;&#x5982;&#x679C;&#x5F02;&#x5E38;&#x53D1;&#x751F;&#x5728;&#x7B2C;&#x4E8C;&#x9636;&#x6BB5;&#xFF0C;&#x8C03;&#x7528;<code>componentDidCatch</code>&#x3002;&#x6240;&#x4EE5;&#xFF0C;<code>getDerivedStateFromError</code>&#x9002;&#x5408;&#x663E;&#x793A;UI&#x9519;&#x8BEF;&#x7EC4;&#x4EF6;&#xFF0C;&#x540E;&#x8005;&#x7531;&#x4E8E;&#x5728;<code>render</code>&#x4E4B;&#x540E;&#x8C03;&#x7528;&#xFF0C;&#x9002;&#x5408;&#x5904;&#x7406;&#x975E;UI&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#x9519;&#x8BEF;&#x4E0A;&#x62A5;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="hoc.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 2.高阶组件">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.错误处理","level":"1.3.1","depth":2,"next":{"title":"2.高阶组件","level":"1.3.2","depth":2,"path":"chapter-senior/hoc.md","ref":"chapter-senior/hoc.md","articles":[]},"previous":{"title":"进阶篇","level":"1.3","depth":1,"ref":"","articles":[{"title":"1.错误处理","level":"1.3.1","depth":2,"path":"chapter-senior/error.md","ref":"chapter-senior/error.md","articles":[]},{"title":"2.高阶组件","level":"1.3.2","depth":2,"path":"chapter-senior/hoc.md","ref":"chapter-senior/hoc.md","articles":[]},{"title":"3.diff算法","level":"1.3.3","depth":2,"path":"chapter-senior/diff.md","ref":"chapter-senior/diff.md","articles":[]},{"title":"4.事务","level":"1.3.4","depth":2,"path":"chapter-senior/transaction.md","ref":"chapter-senior/transaction.md","articles":[]},{"title":"5.Fiber","level":"1.3.5","depth":2,"path":"chapter-senior/fiber.md","ref":"chapter-senior/fiber.md","articles":[]},{"title":"6.React Hook","level":"1.3.6","depth":2,"path":"chapter-senior/hook.md","ref":"chapter-senior/hook.md","articles":[]},{"title":"7.性能优化","level":"1.3.7","depth":2,"path":"chapter-senior/performance-optimization.md","ref":"chapter-senior/performance-optimization.md","articles":[]},{"title":"8.同构","level":"1.3.8","depth":2,"path":"chapter-senior/isomorphic.md","ref":"chapter-senior/isomorphic.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter-senior/error.md","mtime":"2019-11-08T03:38:02.388Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-25T13:17:14.621Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

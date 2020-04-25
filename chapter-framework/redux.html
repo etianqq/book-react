@@ -1,0 +1,693 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>redux · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="mobx.html" />
+    
+    
+    <link rel="prev" href="react-router.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../basic.html">
+            
+                <a href="../basic.html">
+            
+                    
+                    基础篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter-basic/intro.html">
+            
+                <a href="../chapter-basic/intro.html">
+            
+                    
+                    1.基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter-basic/JSX.html">
+            
+                <a href="../chapter-basic/JSX.html">
+            
+                    
+                    2.JSX语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter-basic/component.html">
+            
+                <a href="../chapter-basic/component.html">
+            
+                    
+                    3.创建组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter-basic/lifecycle.html">
+            
+                <a href="../chapter-basic/lifecycle.html">
+            
+                    
+                    4.生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../chapter-basic/props-state.html">
+            
+                <a href="../chapter-basic/props-state.html">
+            
+                    
+                    5.props和state
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../chapter-basic/communication.html">
+            
+                <a href="../chapter-basic/communication.html">
+            
+                    
+                    6.组件通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../chapter-basic/event.html">
+            
+                <a href="../chapter-basic/event.html">
+            
+                    
+                    7.事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    进阶篇
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter-senior/error.html">
+            
+                <a href="../chapter-senior/error.html">
+            
+                    
+                    1.错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter-senior/hoc.html">
+            
+                <a href="../chapter-senior/hoc.html">
+            
+                    
+                    2.高阶组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter-senior/diff.html">
+            
+                <a href="../chapter-senior/diff.html">
+            
+                    
+                    3.diff算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chapter-senior/transaction.html">
+            
+                <a href="../chapter-senior/transaction.html">
+            
+                    
+                    4.事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../chapter-senior/fiber.html">
+            
+                <a href="../chapter-senior/fiber.html">
+            
+                    
+                    5.Fiber
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../chapter-senior/hook.html">
+            
+                <a href="../chapter-senior/hook.html">
+            
+                    
+                    6.React Hook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../chapter-senior/performance-optimization.html">
+            
+                <a href="../chapter-senior/performance-optimization.html">
+            
+                    
+                    7.性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../chapter-senior/isomorphic.html">
+            
+                <a href="../chapter-senior/isomorphic.html">
+            
+                    
+                    8.同构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    相关框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="react-router.html">
+            
+                <a href="react-router.html">
+            
+                    
+                    react-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="redux.html">
+            
+                <a href="redux.html">
+            
+                    
+                    redux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="mobx.html">
+            
+                <a href="mobx.html">
+            
+                    
+                    MobX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="native.html">
+            
+                <a href="native.html">
+            
+                    
+                    react-native
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >redux</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h4 id="react-redux">react redux</h4>
+<p>redux&#x662F;&#x53C2;&#x8003;Flux&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#x7684;&#x4E00;&#x4E2A;&#x7BA1;&#x7406;&#x6570;&#x636E;&#x6D41;&#x7684;&#x5E93;&#x3002;</p>
+<p>&#x4E0B;&#x56FE;&#x4E3A;redux&#x7684;&#x6838;&#x5FC3;&#x8FD0;&#x4F5C;&#x6D41;&#x7A0B;</p>
+<p><img src="../assets/redux.png" alt=""></p>
+<p>redux &#x4E09;&#x5927;&#x539F;&#x5219;&#xFF1A; </p>
+<ul>
+<li>&#x5355;&#x4E00;&#x6570;&#x636E;&#x6E90;&#xFF1A;&#x6574;&#x4E2A;&#x5E94;&#x7528;&#x7684;&#x72B6;&#x6001;&#x90FD;&#x4FDD;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF08;store&#xFF09;&#x4E2D;&#x3002;&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x968F;&#x65F6;&#x53EF;&#x4EE5;&#x53D6;&#x51FA;&#x6574;&#x4E2A;&#x5E94;&#x7528;&#x7684;&#x72B6;&#x6001;&#x8FDB;&#x884C;&#x6301;&#x4E45;&#x5316;&#x3002;</li>
+<li>&#x72B6;&#x6001;&#x53EA;&#x8BFB;&#xFF1A;&#x4E0D;&#x5141;&#x8BB8;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x72B6;&#x6001;&#xFF08;&#x5FC5;&#x987B;&#x901A;&#x8FC7; dispatch action&#x6765;&#x4FEE;&#x6539;&#x72B6;&#x6001;&#xFF09;</li>
+<li>&#x7EAF;&#x51FD;&#x6570;reducer&#xFF1A;&#x72B6;&#x6001;&#x4FEE;&#x6539;&#x4E3A;&#x4E00;&#x4E2A;&#x7EAF;&#x51FD;&#x6570;&#xFF08;&#x63A5;&#x53D7;&#x4E00;&#x5B9A;&#x7684;&#x8F93;&#x5165;&#xFF0C;&#x5FC5;&#x5B9A;&#x4F1A;&#x5F97;&#x5230;&#x4E00;&#x5B9A;&#x7684;&#x8F93;&#x51FA;&#xFF09;&#x5B8C;&#x6210;&#x3002;</li>
+</ul>
+<h4 id="1-redux&#x6838;&#x5FC3;api">1. Redux&#x6838;&#x5FC3;API</h4>
+<p>Redux&#x7684;&#x6838;&#x5FC3;&#x662F;&#x4E00;&#x4E2A;store - &#x5B58;&#x50A8;&#x72B6;&#x6001;&#x3002;</p>
+<pre><code>import {createStore} from &apos;redux&apos;;
+
+const store = createStore(reducers, initialState);
+</code></pre><p>store&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x5305;&#x542B;4&#x4E2A;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li>getState()&#xFF1A;&#x83B7;&#x53D6;store&#x4E2D;&#x5F53;&#x524D;&#x7684;&#x72B6;&#x6001;</li>
+<li>dispatch(action)&#xFF1A;&#x5206;&#x53D1;&#x4E00;&#x4E2A;action&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x8FD9;&#x4E2A;action&#xFF0C;&#x8FD9;&#x662F;&#x552F;&#x4E00;&#x80FD;&#x6539;&#x53D8;store&#x4E2D;&#x6570;&#x636E;&#x7684;&#x65B9;&#x5F0F;</li>
+<li>subscribe(listener)&#xFF1A;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x76D1;&#x542C;&#x8005;&#xFF0C;&#x5B83;&#x5728;store&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#x8C03;&#x7528;</li>
+<li>replaceReducer(nextReducer)&#xFF1A;&#x66F4;&#x65B0;&#x5F53;&#x524D;store&#x91CC;&#x9762;&#x7684;reducer&#xFF0C;&#x4E00;&#x822C;&#x53EA;&#x4F1A;&#x5728;&#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#x4E2D;&#x8C03;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;</li>
+</ul>
+<p>&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x5173;&#x6CE8; getState() &#x548C; dispatch(action) &#x5373;&#x53EF;&#x3002;</p>
+<h4 id="2-&#x4E0E;react&#x7ED1;&#x5B9A;&#x4F7F;&#x7528;">2. &#x4E0E;React&#x7ED1;&#x5B9A;&#x4F7F;&#x7528;</h4>
+<p>&#x4F7F;&#x7528;<code>react-redux</code>&#x5E93;&#x3002;</p>
+<h4 id="3-redux-middleware">3. Redux middleware</h4>
+<p>Redux &#x63D0;&#x4F9B;&#x4E86; <code>applyMiddleware</code>&#x65B9;&#x6CD5;&#x6765;&#x52A0;&#x8F7D; middleware&#x3002;</p>
+<p>&#x6BCF;&#x4E2A;middleware&#x5904;&#x7406;&#x4E00;&#x4E2A;&#x76F8;&#x5BF9;&#x72EC;&#x7ACB;&#x7684;&#x4E1A;&#x52A1;&#x9700;&#x6C42;&#xFF0C;&#x901A;&#x8FC7;&#x4E32;&#x8054;&#x4E0D;&#x540C;&#x7684;middleware&#x5B9E;&#x73B0;&#x53D8;&#x5316;&#x591A;&#x6837;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<pre><code>export default function applyMiddleware(...middlewares) {
+
+  return (createStore) =&gt; (reducer, preloadedState, enhancer) =&gt; {
+    const store = createStore(reducer, preloadedState, enhancer)
+    // &#x5B58;&#x65E7;&#x7684;dispatch 
+    let dispatch = store.dispatch  
+    let chain = [];
+
+    const middlewareAPI = {
+        getState: store.getState,
+        // &#x5229;&#x7528;&#x533F;&#x540D;&#x51FD;&#x6570;&#x5305;&#x88F9;dispatch&#x3002;
+        dispatch: (action) =&gt; dispatch(action)
+    }
+
+    chain = middlewares.map(middleware =&gt; middleware(middlewareAPI));
+    //&#x751F;&#x6210;&#x65B0;&#x7684;dispatch
+    // compose &#x662F;&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;&#x4E2D;&#x7684;&#x7EC4;&#x5408;&#xFF0C;&#x5B83;&#x5C06; chain &#x4E2D;&#x7684;&#x6240;&#x6709;&#x533F;&#x540D;&#x51FD;&#x6570;`[f1, f2, ... , fx, ..., fn]`&#x7EC4;&#x88C5;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x51FD;&#x6570;&#xFF0C;
+    // &#x5373;&#x65B0;&#x7684;dispatch&#x3002;
+    // &#x591A;&#x4E2A;middleware&#x8C03;&#x7528;&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;`dispatch = f1(f2(f3(store.dispatch))))`;
+    dispatch = compose(...chain)(store.dispatch);    
+    // &#x8FD4;&#x56DE;&#x6539;&#x5199;&#x8FC7;disptach&#x7684;store
+    return {
+      ...store,
+      dispatch
+    }
+  }
+}
+
+// &#x5229;&#x7528;applyMiddleware&#x521B;&#x5EFA;&#x65B0;&#x7684;store&#x3002;
+let newStore = applyMiddleware(mid1, mid2, mid3, ...)(createStore)(reducer, null);
+</code></pre><h5 id="&#x5728;middleware&#x4E2D;&#x8C03;&#x7528;nextaction&#x548C;storedispatchaction">&#x5728;middleware&#x4E2D;&#x8C03;&#x7528;next(action)&#x548C;store.dispatch(action)</h5>
+<ul>
+<li>&#x5728;middleware&#x4E2D;&#x8C03;&#x7528;next()&#xFF0C;&#x53EF;&#x4EE5;&#x8FDB;&#x5165;&#x4E0B;&#x4E00;&#x4E2A;middleware</li>
+<li>&#x5728;middleware&#x4E2D;&#x8C03;&#x7528;store.dispatch()&#xFF0C;&#x4F1A;&#x8DF3;&#x51FA;middleware&#x6D41;&#xFF0C;&#x91CD;&#x65B0;&#x5F00;&#x59CB;&#x3002;</li>
+</ul>
+<p><img src="../assets/redux.jpg" alt=""></p>
+<p>&#x5982;&#x4E0A;&#x56FE;&#xFF0C;&#x5206;&#x53D1;&#x4E00;&#x4E2A;action&#x65F6;&#xFF0C;middleware&#x901A;&#x8FC7;next(action)&#x4E00;&#x5C42;&#x5C42;&#x5904;&#x7406;&#x548C;&#x4F20;&#x9012;action&#x5230;Redux&#x539F;&#x751F;&#x7684;dispatch&#x3002;</p>
+<p>&#x5982;&#x679C;&#x67D0;&#x4E2A;middleware&#x4F7F;&#x7528;store.dispatch(action))&#x5206;&#x53D1;action&#xFF0C;&#x4F1A;&#x8DF3;&#x51FA;middleware&#x7BA1;&#x9053;&#xFF0C;&#x91CD;&#x65B0;&#x518D;&#x6765;&#x3002;</p>
+<h5 id="storedispatchaction&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;">store.dispatch(action)&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;</h5>
+<p><strong>action&#x9ED8;&#x8BA4;&#x90FD;&#x662F;&#x540C;&#x6B65;&#x7684;</strong>&#x3002;&#x5982;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;Action&#xFF08;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#xFF09;&#xFF0C;&#x90A3;&#x4E48;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x4E13;&#x95E8;&#x5904;&#x7406;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x7684;middleware&#xFF0C;&#x8FD9;&#x662F;&#x4F1A;&#x7528;&#x5230;store.dispatch()&#x3002;</p>
+<p>&#x6BD4;&#x5982;redux-thunk&#xFF1A;</p>
+<pre><code>const thunk = store =&gt;next =&gt; action =&gt;
+    typeof action === &apos;function&apos; ? action(store.dispatch, store.getState) : next(action)
+</code></pre><p>&#x5F02;&#x6B65;Acton&#x8BBE;&#x8BA1;&#x5982;&#x4E0B;&#xFF1A;&#x53D1;&#x8D77;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#xFF0C;&#x5982;&#x679C;&#x6210;&#x529F;&#xFF0C;&#x5F39;&#x51FA;&#x6210;&#x529F;&#x5F39;&#x6846;&#xFF0C;&#x5426;&#x5219;&#xFF0C;&#x5F39;&#x51FA;&#x9519;&#x8BEF;&#x5F39;&#x6846;&#x3002;</p>
+<pre><code>const getThenShow = (dispatch, getState) =&gt;{
+    const url = &apos;http://xxx.json&apos;;
+
+    fetch(url)
+        .then(response=&gt;{
+            dispatch({
+                type: &apos;SHOW_MESSAGE_SUCCESS&apos;,
+                message: response.json
+            })
+        })
+        .catch(error=&gt;{
+            dispatch({
+                type: &apos;SHOW_MESSAGE_FAIL&apos;,
+                message: &apos;error&apos;
+            })
+        })
+}
+</code></pre><h4 id="4-redux&#x6027;&#x80FD;&#x4F18;&#x5316;">4. Redux&#x6027;&#x80FD;&#x4F18;&#x5316;</h4>
+<p>1) &#x4F7F;&#x7528;react-redux</p>
+<p>&#x5728;&#x4F7F;&#x7528;react-redux&#x7684;connect&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x4EA7;&#x751F;&#x4E86;&#x4E00;&#x4E2A;&#x65E0;&#x540D;&#x7684;React&#x7EC4;&#x4EF6;&#x7C7B;&#xFF0C;&#x8FD9;&#x4E2A;&#x7C7B;&#x5B9A;&#x5236;&#x4E86;shouldComponentUpdate&#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5B9E;&#x73B0;&#x903B;&#x8F91;&#x65F6;&#x5BF9;&#x6BD4;&#x8FD9;&#x6B21;&#x4F20;&#x9012;&#x7ED9;&#x5185;&#x5C42;&#x50BB;&#x74DC;&#x7EC4;&#x4EF6;&#x7684;props&#x548C;&#x4E0A;&#x6B21;&#x7684;props&#x3002;&#x5982;&#x679C;props&#x6CA1;&#x6709;&#x53D8;&#x5316;&#xFF0C;&#x90A3;&#x5185;&#x5C42;&#x7EC4;&#x4EF6;&#x65E0;&#x9700;&#x518D;&#x6B21;&#x6E32;&#x67D3;&#x3002;</p>
+<pre><code>import {connect} from &apos;react-redux&apos;;
+
+const Foo = ({text})=&gt;(
+    &lt;div&gt;{text}&lt;/div&gt;
+)
+
+const mapStateToProps = (state)=&gt; (
+    text: state.text
+)
+
+// connect&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x4E86;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x7EC4;&#x4EF6;&#xFF0C;&#x4F1A;&#x5B9E;&#x73B0;shouldComponentUpdate&#x51FD;&#x6570;&#xFF0C;&#x5224;&#x65AD;&#x8FD9;&#x6B21;&#x7684;text&#x548C;&#x4E0A;&#x4E00;&#x6B21;text&#x7684;&#x503C;&#x662F;&#x5426;&#x76F8;&#x7B49;&#x3002;
+export default connect(mapStateToProps)(Foo);
+</code></pre><p>connect&#x51FD;&#x6570;&#x4E2D;&#x91C7;&#x7528;&#x6D45;&#x6BD4;&#x8F83;&#xFF0C;&#x5373; value1 == value2</p>
+<p>2&#xFF09;&#x7528;reselect&#x63D0;&#x9AD8;&#x6570;&#x636E;&#x83B7;&#x53D6;&#x6027;&#x80FD;</p>
+<p>&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#xFF1A;&#x53EA;&#x8981;&#x76F8;&#x5173;&#x72B6;&#x6001;&#x6CA1;&#x6709;&#x6539;&#x53D8;&#xFF0C;&#x5C31;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x4E0A;&#x4E00;&#x6B21;&#x7684;&#x7F13;&#x5B58;&#x7ED3;&#x679C;&#x3002;</p>
+<p>reselect&#x628A;&#x8BA1;&#x7B97;&#x8FC7;&#x7A0B;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<p><strong>&#x6B65;&#x9AA4;1</strong>: &#x4ECE;&#x8F93;&#x5165;&#x53C2;&#x6570;state&#x62BD;&#x53D6;&#x7B2C;&#x4E00;&#x5C42;&#x7ED3;&#x679C;&#xFF0C;&#x7B2C;&#x4E00;&#x5C42;&#x7ED3;&#x679C;&#x548C;&#x4E4B;&#x524D;&#x62BD;&#x53D6;&#x7684;&#x7B2C;&#x4E00;&#x5C42;&#x7ED3;&#x679C;&#x505A;&#x6BD4;&#x8F83;&#xFF08;===&#x6BD4;&#x8F83;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x53D1;&#x73B0;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#xFF0C;&#x5C31;&#x4E0D;&#x4F1A;&#x8FDB;&#x5165;&#x7B2C;&#x4E8C;&#x6B65;&#x8BA1;&#x7B97;&#xFF0C;&#x9009;&#x62E9;&#x5668;&#x76F4;&#x63A5;&#x628A;&#x4E4B;&#x524D;&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#x7684;&#x8FD0;&#x8F93;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x3002;</p>
+<p><strong>&#x6B65;&#x9AA4;2</strong>: &#x6839;&#x636E;&#x7B2C;&#x4E00;&#x5C42;&#x7ED3;&#x679C;&#x8BA1;&#x7B97;&#x51FA;&#x9009;&#x62E9;&#x6743;&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x7684;&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x5B9A;&#x4E49;&#x9009;&#x62E9;&#x5668;&#xFF1A;</p>
+<pre><code>import { createSelector } from &apos;reselect&apos;
+
+const getVisibilityFilter = (state) =&gt; state.visibilityFilter
+const getTodos = (state) =&gt; state.todos
+
+export const getVisibleTodos = createSelector(
+  [ getVisibilityFilter, getTodos ],
+  (visibilityFilter, todos) =&gt; {
+    switch (visibilityFilter) {
+      case &apos;SHOW_ALL&apos;:
+        return todos
+      case &apos;SHOW_COMPLETED&apos;:
+        return todos.filter(t =&gt; t.completed)
+      case &apos;SHOW_ACTIVE&apos;:
+        return todos.filter(t =&gt; !t.completed)
+    }
+  }
+)
+</code></pre><p>&#x4F7F;&#x7528;&#x65B0;&#x5B9A;&#x4E49;&#x7684;&#x9009;&#x62E9;&#x5668;&#xFF1A;</p>
+<pre><code>import {getVisibleTodos} from &apos;./selector.js&apos;
+
+const mapStateToProps = (state) =&gt; {
+    return {
+        todos: getVisibleTodos(state);
+    }
+}
+</code></pre><p>3&#xFF09;Immutable Redux</p>
+<p>&#x6301;&#x4E45;&#x5316;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x7ED3;&#x6784;&#x5171;&#x4EAB;&#xFF0C;&#x60F0;&#x6027;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x901A;&#x8FC7;Immutable.js&#x521B;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;&#x5728;&#x4EFB;&#x4F55;&#x60C5;&#x51B5;&#x4E0B;&#x90FD;&#x65E0;&#x6CD5;&#x88AB;&#x4FEE;&#x6539;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x9632;&#x6B62;&#x7531;&#x4E8E;&#x5F00;&#x53D1;&#x8005;&#x7684;&#x7C97;&#x5FC3;&#x5BFC;&#x81F4;&#x76F4;&#x63A5;&#x4FEE;&#x6539;Redux&#x7684;state&#x3002;</p>
+<h4 id="5-&#x5408;&#x7406;-connect-&#x573A;&#x666F;">5. &#x5408;&#x7406; connect &#x573A;&#x666F;</h4>
+<p>&#x5728;&#x4F7F;&#x7528; Redux &#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x642D;&#x914D; React-redux &#x6765;&#x5BF9;&#x7EC4;&#x4EF6;&#x548C;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x8054;&#x901A;&#xFF08;connect&#xFF09;&#xFF0C;&#x4E00;&#x4E2A;&#x5E38;&#x9677;&#x5165;&#x7684;&#x8BEF;&#x533A;&#x5C31;&#x662F;&#x6EE5;&#x7528;connect&#xFF0C;&#x800C;&#x6CA1;&#x6709;&#x8FDB;&#x884C;&#x66F4;&#x5408;&#x7406;&#x7684;&#x8BBE;&#x8BA1;&#x5206;&#x6790;&#x3002;&#x4E5F;&#x53EF;&#x80FD;&#x53EA;&#x5728;&#x9876;&#x5C42;&#x8FDB;&#x884C;&#x4E86; connect &#x8BBE;&#x8BA1;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x4E00;&#x5C42;&#x5C42;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x4F20;&#x9012;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x53EA;&#x5BF9; Page &#x8FD9;&#x4E2A;&#x9876;&#x5C42;&#x7EC4;&#x4EF6;&#x8FDB;&#x884C; connect &#x8BBE;&#x8BA1;&#xFF0C;&#x5176;&#x4ED6;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x4F9D;&#x9760; Page &#x7EC4;&#x4EF6;&#x8FDB;&#x884C;&#x5206;&#x53D1;&#xFF0C;&#x5219;&#x8BBE;&#x8BA1;&#x5982;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="https://images.gitbook.cn/693a18c0-9b43-11e9-a438-01dafdf3f255" alt=""></p>
+<p>&#x8FD9;&#x6837;&#x505A;&#x5B58;&#x5728;&#x7684;&#x95EE;&#x9898;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>&#x5F53;&#x6539;&#x52A8; Profile &#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x7528;&#x6237;&#x5934;&#x50CF;&#x65F6;&#xFF0C;&#x7531;&#x4E8E;&#x6570;&#x636E;&#x53D8;&#x52A8;&#x6574;&#x4E2A; Page &#x7EC4;&#x4EF6;&#x90FD;&#x4F1A;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#xFF1B;</li>
+<li>&#x5F53;&#x5220;&#x9664; Feeds &#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x4E00;&#x6761;&#x4FE1;&#x606F;&#x65F6;&#xFF0C;&#x6574;&#x4E2A; Page &#x7EC4;&#x4EF6;&#x4E5F;&#x90FD;&#x4F1A;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#xFF1B;</li>
+<li>&#x5F53;&#x5728; Images &#x7EC4;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x5F20;&#x56FE;&#x7247;&#x65F6;&#xFF0C;&#x6574;&#x4E2A; Page &#x7EC4;&#x4EF6;&#x540C;&#x6837;&#x90FD;&#x4F1A;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x3002;</li>
+</ul>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x66F4;&#x597D;&#x7684;&#x505A;&#x6CD5;&#x662F;&#x5BF9; Profile&#x3001;Feeds&#x3001;Images &#x8FD9;&#x4E09;&#x4E2A;&#x7EC4;&#x4EF6;&#x5206;&#x522B;&#x8FDB;&#x884C; connect &#x8BBE;&#x8BA1;&#xFF0C;&#x5728; connect &#x65B9;&#x6CD5;&#x4E2D;&#x4F7F;&#x7528;
+mapStateToProps &#x7B5B;&#x9009;&#x51FA;&#x4E0D;&#x540C;&#x7EC4;&#x4EF6;&#x5173;&#x5FC3;&#x7684; state &#x90E8;&#x5206;&#xFF0C;&#x5982;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="https://images.gitbook.cn/893fa890-9b45-11e9-9465-a7e3d006cf60" alt=""></p>
+<p>&#x8FD9;&#x6837;&#x505A;&#x7684;&#x597D;&#x5904;&#x5F88;&#x660E;&#x663E;&#xFF1A;</p>
+<ul>
+<li>&#x5F53;&#x6539;&#x52A8; Profile &#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x7528;&#x6237;&#x5934;&#x50CF;&#x65F6;&#xFF0C;&#x53EA;&#x6709; Profile &#x7EC4;&#x4EF6;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#xFF1B;</li>
+<li>&#x5F53;&#x5220;&#x9664; Feeds &#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x4E00;&#x6761;&#x4FE1;&#x606F;&#x65F6;&#xFF0C;&#x53EA;&#x6709; Feed &#x7EC4;&#x4EF6;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#xFF1B;</li>
+<li>&#x5F53;&#x5728; Images &#x7EC4;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x5F20;&#x56FE;&#x7247;&#x65F6;&#xFF0C;&#x53EA;&#x6709; Images &#x7EC4;&#x4EF6;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x3002;</li>
+</ul>
+<h4 id=""> </h4>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="react-router.html" class="navigation navigation-prev " aria-label="Previous page: react-router">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="mobx.html" class="navigation navigation-next " aria-label="Next page: MobX">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"redux","level":"1.4.2","depth":2,"next":{"title":"MobX","level":"1.4.3","depth":2,"path":"chapter-framework/mobx.md","ref":"chapter-framework/mobx.md","articles":[]},"previous":{"title":"react-router","level":"1.4.1","depth":2,"path":"chapter-framework/react-router.md","ref":"chapter-framework/react-router.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter-framework/redux.md","mtime":"2019-11-14T03:01:31.373Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-25T13:17:14.621Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

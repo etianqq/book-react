@@ -1,0 +1,661 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.JSX语法 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="component.html" />
+    
+    
+    <link rel="prev" href="intro.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../basic.html">
+            
+                <a href="../basic.html">
+            
+                    
+                    基础篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="intro.html">
+            
+                <a href="intro.html">
+            
+                    
+                    1.基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="JSX.html">
+            
+                <a href="JSX.html">
+            
+                    
+                    2.JSX语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="component.html">
+            
+                <a href="component.html">
+            
+                    
+                    3.创建组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="lifecycle.html">
+            
+                <a href="lifecycle.html">
+            
+                    
+                    4.生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="props-state.html">
+            
+                <a href="props-state.html">
+            
+                    
+                    5.props和state
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="communication.html">
+            
+                <a href="communication.html">
+            
+                    
+                    6.组件通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="event.html">
+            
+                <a href="event.html">
+            
+                    
+                    7.事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    进阶篇
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter-senior/error.html">
+            
+                <a href="../chapter-senior/error.html">
+            
+                    
+                    1.错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter-senior/hoc.html">
+            
+                <a href="../chapter-senior/hoc.html">
+            
+                    
+                    2.高阶组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter-senior/diff.html">
+            
+                <a href="../chapter-senior/diff.html">
+            
+                    
+                    3.diff算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chapter-senior/transaction.html">
+            
+                <a href="../chapter-senior/transaction.html">
+            
+                    
+                    4.事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../chapter-senior/fiber.html">
+            
+                <a href="../chapter-senior/fiber.html">
+            
+                    
+                    5.Fiber
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../chapter-senior/hook.html">
+            
+                <a href="../chapter-senior/hook.html">
+            
+                    
+                    6.React Hook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../chapter-senior/performance-optimization.html">
+            
+                <a href="../chapter-senior/performance-optimization.html">
+            
+                    
+                    7.性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../chapter-senior/isomorphic.html">
+            
+                <a href="../chapter-senior/isomorphic.html">
+            
+                    
+                    8.同构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    相关框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter-framework/react-router.html">
+            
+                <a href="../chapter-framework/react-router.html">
+            
+                    
+                    react-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter-framework/redux.html">
+            
+                <a href="../chapter-framework/redux.html">
+            
+                    
+                    redux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter-framework/mobx.html">
+            
+                <a href="../chapter-framework/mobx.html">
+            
+                    
+                    MobX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter-framework/native.html">
+            
+                <a href="../chapter-framework/native.html">
+            
+                    
+                    react-native
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.JSX语法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h4 id="jsx&#x8BED;&#x6CD5;">JSX&#x8BED;&#x6CD5;</h4>
+<p>JSX&#x662F;&#x4E00;&#x79CD;&#x7C7B;XML&#x683C;&#x5F0F;&#x7684;&#x8BED;&#x6CD5;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;JavaScript&#x8BED;&#x6CD5;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;HTML&#x8BED;&#x6CD5;&#x6765;&#x521B;&#x5EFA;&#x865A;&#x62DF;&#x5143;&#x7D20;&#xFF08;&#x865A;&#x62DF;DOM&#x6811;&#xFF09;&#x3002;</p>
+<h4 id="1-&#x57FA;&#x672C;&#x8BED;&#x6CD5;">1. &#x57FA;&#x672C;&#x8BED;&#x6CD5;</h4>
+<p>JSX&#x91C7;&#x7528;&#x6807;&#x7B7E;&#x6765;&#x5B9E;&#x73B0;&#x4EFB;&#x610F;&#x5D4C;&#x5957;&#xFF0C;&#x8FD9;&#x70B9;&#x548C;XML/HTML&#x7C7B;&#x4F3C;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x6784;&#x9020;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#xFF1A;</p>
+<pre><code>var MyList = (
+  &lt;ul&gt;
+    &lt;li&gt;item1&lt;/li&gt;
+    &lt;li&gt;item2&lt;/li&gt;
+  &lt;/ul&gt;);
+// &#x540E;&#x7EED;&#x53EF;&#x901A;&#x8FC7;&#x6807;&#x7B7E;&lt;MyList /&gt;&#x4F7F;&#x7528;&#x8BE5;&#x7EC4;&#x4EF6;
+</code></pre><p>&#x8981;&#x6CE8;&#x610F;&#x4E0B;&#x9762;&#x51E0;&#x70B9;&#xFF1A;</p>
+<ol>
+<li>&#x5B9A;&#x4E49;&#x6807;&#x7B7E;&#x65F6;&#xFF0C;&#x6700;&#x5916;&#x5C42;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;&#xFF0C;&#x5373;root&#x6807;&#x7B7E;&#x53EA;&#x5141;&#x8BB8;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x3002;&#x4E0B;&#x9762;&#x7684;&#x5199;&#x6CD5;&#x662F;&#x9519;&#x8BEF;&#x7684;&#xFF1A;<pre><code>var MyList =(
+&lt;h1&gt;this is a list&lt;/h1&gt;
+&lt;ul&gt;
+ &lt;li&gt;item1&lt;/li&gt;
+ &lt;li&gt;item2&lt;/li&gt;
+&lt;/ul&gt;);
+</code></pre></li>
+</ol>
+<p>&#x5982;&#x4F55;&#x51CF;&#x5C11;DOM&#x5D4C;&#x5957;&#xFF1A;</p>
+<ul>
+<li>React 16&#x4E4B;&#x540E;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;<code>React.Fragment</code>&#x7EC4;&#x4EF6;&#xFF0C;&#x5176;&#x53EF;&#x4EE5;&#x5728;&#x4E0D;&#x989D;&#x5916;&#x521B;&#x5EFA;DOM&#x5143;&#x7D20;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8BA9;<code>render()</code>&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#x3002;</li>
+<li>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6570;&#x7EC4;&#x7684;&#x65B9;&#x5F0F;&#x8FD4;&#x56DE;&#x591A;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF0C;&#x6BCF;&#x4E2A;&#x6570;&#x7EC4;&#x9879;&#x90FD;&#x5FC5;&#x987B;&#x6709;&#x552F;&#x4E00;&#x5C5E;&#x6027;<code>key</code></li>
+</ul>
+<pre><code>1. &#x5229;&#x7528;&lt;React.Fragment&gt;&#x7EC4;&#x4EF6;
+return (
+    &lt;React.Fragment&gt;
+      Some text.
+      &lt;h2&gt;A heading&lt;/h2&gt;
+    &lt;/React.Fragment&gt;
+  );
+}
+2. &#x8FD4;&#x56DE;&#x6570;&#x7EC4;&#x7C7B;&#x578B;
+return (
+    [
+        &lt;Component1 key=&apos;1&apos;&gt;,
+        &lt;Component2 key=&apos;2&apos;&gt;,
+    ]
+  );
+}
+</code></pre><ol>
+<li>&#x6807;&#x7B7E;&#x5FC5;&#x987B;&#x95ED;&#x5408;&#xFF0C;&#x4E25;&#x683C;&#x9075;&#x5B88;XML&#x8BED;&#x6CD5;&#x3002;&#x4E0B;&#x9762;&#x7684;&#x5199;&#x6CD5;&#x662F;&#x9519;&#x8BEF;&#x7684;&#xFF1A;<pre><code>var MyList = (
+&lt;ul&gt;
+&lt;li&gt;item1&lt;/li&gt;
+&lt;li&gt;item2&lt;/li&gt;);
+</code></pre></li>
+<li>&#x6839;&#x636E;&#x6807;&#x7B7E;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x6BCD;&#x5927;&#x5C0F;&#x5199;&#x60C5;&#x51B5;&#xFF0C;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x4E24;&#x79CD;&#x5143;&#x7D20;&#xFF1A;<strong>DOM&#x5143;&#x7D20;&#x548C;&#x7EC4;&#x4EF6;&#x5143;&#x7D20;</strong>&#x3002;<ul>
+<li>&#x9996;&#x5B57;&#x6BCD;&#x4E3A;&#x5C0F;&#x5199;&#x65F6;&#xFF0C;&#x662F;DOM&#x5143;&#x7D20;&#xFF0C;&#x5373;&#x539F;&#x751F;&#x7684;HTML&#x6807;&#x7B7E;&#x3002;</li>
+<li>&#x9996;&#x5B57;&#x6BCD;&#x4E3A;&#x5927;&#x5199;&#x65F6;&#xFF0C;&#x662F;&#x7EC4;&#x4EF6;&#x5143;&#x7D20;&#x3002;</li>
+</ul>
+</li>
+</ol>
+<h4 id="2-&#x5143;&#x7D20;&#x5C5E;&#x6027;">2. &#x5143;&#x7D20;&#x5C5E;&#x6027;</h4>
+<p>&#x4E0A;&#x4E00;&#x4E2A;&#x5C0F;&#x7ED3;&#x63D0;&#x5230;&#x4E86;&#x6709;&#x4E24;&#x79CD;&#x5143;&#x7D20;&#xFF0C;<strong>DOM&#x5143;&#x7D20;&#x548C;&#x7EC4;&#x4EF6;&#x5143;&#x7D20;</strong>&#x3002;</p>
+<p>&#x5148;&#x8BB2;&#x8FF0;&#x4E0B;&#x4E24;&#x79CD;&#x5143;&#x7D20;&#x5728;&#x5904;&#x7406;&#x5C5E;&#x6027;&#x65F6;&#x7684;&#x4E0D;&#x540C;&#x4E4B;&#x5904;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>DOM&#x5143;&#x7D20;</th>
+<th>&#x7EC4;&#x4EF6;&#x5143;&#x7D20;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x81EA;&#x5B9A;&#x4E49;</td>
+<td>&#x9700;&#x8981;&#x52A0;<code>data-</code>&#x524D;&#x7F00;&#x3002;&#x5982;&#xFF1A;<code>&lt;h1 data-attr=&quot;xxx&quot;&gt;&lt;/h1&gt;</code></td>
+<td>&#x53EF;&#x4EE5;&#x968F;&#x610F;&#x5B9A;&#x4E49;&#x5C5E;&#x6027;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>class&#x548C;for</td>
+<td>&#x56E0;&#x4E3A;&#x8FD9;&#x4E24;&#x4E2A;&#x540D;&#x5B57;&#x4E3A;JavaScript&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981;&#x8F6C;&#x6362;&#x4E3A;<code>className</code>&#x548C;<code>htmlFor</code>&#x4E4B;&#x540E;&#x518D;&#x4F7F;&#x7528;</td>
+<td>&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x8BE5;&#x5C5E;&#x6027;&#x540D;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x7136;&#x540E;&#x5206;&#x6790;&#x4E00;&#x4E0B;&#x4E24;&#x79CD;&#x5143;&#x7D20;&#x5904;&#x7406;&#x5C5E;&#x6027;&#x65F6;&#x76F8;&#x540C;&#x4E4B;&#x5904;&#x3002;</p>
+<p>(1) JavaScript&#x8868;&#x8FBE;&#x5F0F;
+&#x53EF;&#x4EE5;&#x4F7F;&#x7528;JavaScript&#x5C5E;&#x6027;&#x8868;&#x8FBE;&#x5F0F;&#x3002;&#x7528;<code>{}</code>&#x4EE3;&#x66FF;<code>&quot;&quot;</code>&#x5373;&#x53EF;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;<code>{javaScript code}</code>&#x3002;</p>
+<pre><code>&lt;MyList name={isLogin ? name: &quot;user&quot;} /&gt;
+</code></pre><p>(2) &#x5C55;&#x5F00;&#x5C5E;&#x6027;
+&#x4F7F;&#x7528;&#x201C;&#x5C55;&#x5F00;&#x5C5E;&#x6027;&#x201D;&#x6765;&#x5B9A;&#x4E49;&#x5168;&#x90E8;&#x5C5E;&#x6027;&#x3002;&#x5982;&#x679C;&#x5143;&#x7D20;&#x5C5E;&#x6027;&#x7279;&#x522B;&#x591A;&#xFF0C;&#x5EFA;&#x8BAE;&#x91C7;&#x7528;&#x8FD9;&#x79CD;&#x683C;&#x5F0F;&#x3002;</p>
+<pre><code>const data = {name: &apos;button&apos;, value=&apos;1&apos; text=&apos;it is a button&apos;};
+let component = &lt;Component name={data.name} value={data.value} text={data.text} /&gt;
+&#x66F4;&#x7B80;&#x7EC3;&#x7684;&#x5199;&#x6CD5;&#x4E3A;&#xFF1A;
+let component = &lt;Component {...data} /&gt;
+</code></pre><p>(3) <code>dangerouslySetInnerHTML</code>&#x5C5E;&#x6027; 
+React&#x4F1A;&#x5C06;&#x6240;&#x6709;&#x663E;&#x793A;&#x5728;DOM&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x4E49;&#xFF0C;&#x9632;&#x6B62;XSS&#x653B;&#x51FB;&#x3002;&#x5982;&#x679C;&#x7EC4;&#x4EF6;&#x5B50;&#x5143;&#x7D20;&#x4E3A;HTML&#xFF0C;&#x90A3;&#x4E48;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>dangerouslySetInnerHTML</code>&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x3002;</p>
+<pre><code>var MyList = (
+&lt;ul&gt;
+  &lt;li data-attr=&quot;{a}&quot; dangerouslySetInnerHTML={{__html: &apos;&lt;h1&gt;item1&lt;/h1&gt;&apos;}}&gt;&lt;/li&gt;
+&lt;/ul&gt;)
+</code></pre><p>(4) ref&#x5C5E;&#x6027;
+&#x901A;&#x8FC7;ref&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x5F97;&#x5230;DOM/&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x3002;</p>
+<ul>
+<li>&#x5C06;ref&#x8D4B;&#x503C;&#x7ED9;&#x53D8;&#x91CF;&#xFF1A;<ul>
+<li>&#x5982;&#x679C;&#x5728;&#x539F;&#x751F;HTML&#x6807;&#x7B7E;&#x4E0A;&#x4F7F;&#x7528;ref&#x5C5E;&#x6027;&#xFF0C;&#x8FD4;&#x56DE;DOM&#x5BF9;&#x8C61;&#xFF1B;</li>
+<li>&#x5982;&#x679C;&#x662F;&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x6807;&#x7B7E;&#x4E0A;&#x4F7F;&#x7528;ref&#x5C5E;&#x6027;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x8BE5;&#x7EC4;&#x4EF6;&#x5BF9;&#x8C61;&#xFF1B;</li>
+</ul>
+</li>
+<li>&#x5C06;ref&#x8D4B;&#x503C;&#x7ED9;&#x51FD;&#x6570;&#xFF0C;&#x5F53;&#x7EC4;&#x4EF6;&#x5B8C;&#x6210;&#x88C5;&#x8F7D;&#x65F6;&#x4F1A;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x53C2;&#x6570;&#x662F;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x7684;DOM&#x5BF9;&#x8C61;&#x3002;</li>
+</ul>
+<p>&#x53C2;&#x8003;&#x4E0B;&#x8FF0;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>class Comp extends React.Component {
+    constructor() {
+        this.subCompRef = React.createRef();
+    }
+
+    componentDidMount() {
+        // &#x901A;&#x8FC7;this.refs&#x8BBF;&#x95EE;ref&#x5C5E;&#x6027;&#x503C;
+        console.log(&quot;this.subCompRef:&quot; + this.subCompRef);
+    }
+
+    render() {
+        return (&lt;SubComp ref={this.subCompRef}/&gt;)
+    }
+}
+class SubComp extends React.Component {
+
+    render() {
+        return (&lt;h1&gt;Hello world!&lt;/h1&gt;)
+    }
+}
+</code></pre><p>&#x63A7;&#x5236;&#x53F0;&#x6253;&#x5370;&#x503C;&#x4E3A;&#xFF1A;</p>
+<pre><code>{current: div.builder-block}
+</code></pre><h4 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h4>
+<p>&#x4E86;&#x89E3;&#x4E86;JSX&#x8BED;&#x6CD5;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x5C1D;&#x8BD5;&#x521B;&#x5EFA;React&#x7EC4;&#x4EF6;&#x4E86;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="intro.html" class="navigation navigation-prev " aria-label="Previous page: 1.基本概念">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="component.html" class="navigation navigation-next " aria-label="Next page: 3.创建组件">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.JSX语法","level":"1.2.2","depth":2,"next":{"title":"3.创建组件","level":"1.2.3","depth":2,"path":"chapter-basic/component.md","ref":"chapter-basic/component.md","articles":[]},"previous":{"title":"1.基本概念","level":"1.2.1","depth":2,"path":"chapter-basic/intro.md","ref":"chapter-basic/intro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter-basic/JSX.md","mtime":"2019-11-08T03:34:00.795Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-25T13:17:14.621Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,28 @@
+{
+  "name": "book-react2",
+  "version": "1.0.0",
+  "description": "react training",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-gh-pages": "^0.5.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "node_modules/.bin/gulp deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etianqq/book-react2.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "etianqq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/etianqq/book-react2/issues"
+  },
+  "homepage": "https://github.com/etianqq/book-react2#readme"
+}

@@ -1,0 +1,675 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6.React Hook · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="performance-optimization.html" />
+    
+    
+    <link rel="prev" href="fiber.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../basic.html">
+            
+                <a href="../basic.html">
+            
+                    
+                    基础篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter-basic/intro.html">
+            
+                <a href="../chapter-basic/intro.html">
+            
+                    
+                    1.基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter-basic/JSX.html">
+            
+                <a href="../chapter-basic/JSX.html">
+            
+                    
+                    2.JSX语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter-basic/component.html">
+            
+                <a href="../chapter-basic/component.html">
+            
+                    
+                    3.创建组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter-basic/lifecycle.html">
+            
+                <a href="../chapter-basic/lifecycle.html">
+            
+                    
+                    4.生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../chapter-basic/props-state.html">
+            
+                <a href="../chapter-basic/props-state.html">
+            
+                    
+                    5.props和state
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../chapter-basic/communication.html">
+            
+                <a href="../chapter-basic/communication.html">
+            
+                    
+                    6.组件通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../chapter-basic/event.html">
+            
+                <a href="../chapter-basic/event.html">
+            
+                    
+                    7.事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    进阶篇
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="error.html">
+            
+                <a href="error.html">
+            
+                    
+                    1.错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="hoc.html">
+            
+                <a href="hoc.html">
+            
+                    
+                    2.高阶组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="diff.html">
+            
+                <a href="diff.html">
+            
+                    
+                    3.diff算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="transaction.html">
+            
+                <a href="transaction.html">
+            
+                    
+                    4.事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="fiber.html">
+            
+                <a href="fiber.html">
+            
+                    
+                    5.Fiber
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.6" data-path="hook.html">
+            
+                <a href="hook.html">
+            
+                    
+                    6.React Hook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="performance-optimization.html">
+            
+                <a href="performance-optimization.html">
+            
+                    
+                    7.性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="isomorphic.html">
+            
+                <a href="isomorphic.html">
+            
+                    
+                    8.同构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    相关框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter-framework/react-router.html">
+            
+                <a href="../chapter-framework/react-router.html">
+            
+                    
+                    react-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter-framework/redux.html">
+            
+                <a href="../chapter-framework/redux.html">
+            
+                    
+                    redux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter-framework/mobx.html">
+            
+                <a href="../chapter-framework/mobx.html">
+            
+                    
+                    MobX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter-framework/native.html">
+            
+                <a href="../chapter-framework/native.html">
+            
+                    
+                    react-native
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >6.React Hook</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h4 id="react-hook">React Hook</h4>
+<p><strong>Hook &#x662F; React 16.8 &#x7684;&#x65B0;&#x589E;&#x7279;&#x6027;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x5728;&#x4E0D;&#x7F16;&#x5199; class &#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x7528; state &#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x7684; React &#x7279;&#x6027;&#x3002;</strong></p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Example</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// &#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x53EB;&#x505A; &#x201C;count&#x201D; &#x7684; state &#x53D8;&#x91CF;</span>
+  <span class="hljs-keyword">const</span> [count, setCount] = useState(<span class="hljs-number">0</span>);
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>You clicked {count} times<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setCount(count + 1)}&gt;
+        Click me
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x91CC;&#xFF0C;<strong>useState</strong> &#x5C31;&#x662F;&#x4E00;&#x4E2A; Hook&#x3002;</p>
+<h4 id="&#x4EC0;&#x4E48;&#x662F;-hook">&#x4EC0;&#x4E48;&#x662F; Hook?</h4>
+<p>Hook &#x662F;&#x4E00;&#x4E9B;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x5728;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x91CC;&#x201C;&#x94A9;&#x5165;&#x201D; React state &#x53CA;&#x751F;&#x547D;&#x5468;&#x671F;&#x7B49;&#x7279;&#x6027;&#x7684;&#x51FD;&#x6570;&#x3002;<strong>Hook &#x4E0D;&#x80FD;&#x5728; class &#x7EC4;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;</strong>&#x3002;</p>
+<p>React &#x5185;&#x7F6E;&#x4E86;&#x4E00;&#x4E9B;&#x50CF; useState &#x8FD9;&#x6837;&#x7684; Hook&#x3002;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4F60;&#x81EA;&#x5DF1;&#x7684; Hook &#x6765;&#x590D;&#x7528;&#x4E0D;&#x540C;&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x72B6;&#x6001;&#x903B;&#x8F91;&#x3002;</p>
+<p>&#x5185;&#x7F6E;Hook&#xFF1A;</p>
+<ul>
+<li>useState</li>
+<li>useEffect</li>
+<li>useContext</li>
+<li>useReducer</li>
+<li>useCallback</li>
+<li>useMemo</li>
+<li>useRef</li>
+<li>useImperativeHandle</li>
+<li>useLayoutEffect</li>
+<li>useDebugValue</li>
+</ul>
+<p>&#x4E0B;&#x9762;&#x53EA;&#x4ECB;&#x7ECD;&#x524D;&#x4E24;&#x79CD;Hook&#x3002;</p>
+<h4 id="state-hook">State Hook</h4>
+<p><code>useState</code> &#x4E0E; class &#x91CC;&#x9762;&#x7684; this.state &#x63D0;&#x4F9B;&#x7684;&#x529F;&#x80FD;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x3002;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x5728;&#x51FD;&#x6570;&#x9000;&#x51FA;&#x540E;&#x53D8;&#x91CF;&#x5C31;&#x5C31;&#x4F1A;&#x201D;&#x6D88;&#x5931;&#x201D;&#xFF0C;&#x800C; state &#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x4F1A;&#x88AB; React &#x4FDD;&#x7559;&#xFF08;&#x7C7B;&#x4F3C;JS&#x95ED;&#x5305;&#xFF09;&#x3002;</p>
+<p><code>useState</code>&#x7684;&#x6BCF;&#x6B21;&#x8C03;&#x7528;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x5B8C;&#x5168;&#x72EC;&#x7ACB;&#x7684; state &#x2014;&#x2014; &#x56E0;&#x6B64;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x5355;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E2D;&#x591A;&#x6B21;&#x8C03;&#x7528;&#x540C;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49; Hook&#x3002;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x58F0;&#x660E;&#x591A;&#x4E2A; state &#x53D8;&#x91CF;&#xFF01;</span>
+<span class="hljs-keyword">const</span> [age, setAge] = useState(<span class="hljs-number">42</span>);
+<span class="hljs-keyword">const</span> [fruit, setFruit] = useState(<span class="hljs-string">&apos;banana&apos;</span>);
+<span class="hljs-keyword">const</span> [todos, setTodos] = useState([{ text: <span class="hljs-string">&apos;Learn Hooks&apos;</span> }]);
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<h5 id="1&#x58F0;&#x660E;-state-&#x53D8;&#x91CF;">1.&#x58F0;&#x660E; State &#x53D8;&#x91CF;</h5>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Example</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// &#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x53EB; &quot;count&quot; &#x7684; state &#x53D8;&#x91CF;</span>
+  <span class="hljs-keyword">const</span> [count, setCount] = useState(<span class="hljs-number">0</span>);
+}
+</code></pre>
+<h5 id="2&#x8BFB;&#x53D6;-state">2.&#x8BFB;&#x53D6; State</h5>
+<pre><code class="lang-javascript"> &lt;p&gt;You clicked {count} times&lt;/p&gt;
+</code></pre>
+<h5 id="3&#x66F4;&#x65B0;-state">3.&#x66F4;&#x65B0; State</h5>
+<pre><code class="lang-javascript">&lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+    Click me
+&lt;/button&gt;
+</code></pre>
+<h4 id="effect-hook">Effect Hook</h4>
+<p><strong>useEffect</strong> &#x5C31;&#x662F;&#x4E00;&#x4E2A; Effect Hook&#xFF0C;&#x7ED9;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x589E;&#x52A0;&#x4E86;&#x64CD;&#x4F5C;&#x526F;&#x4F5C;&#x7528;&#x7684;&#x80FD;&#x529B;&#x3002;&#x5B83;&#x8DDF; class &#x7EC4;&#x4EF6;&#x4E2D;&#x7684; componentDidMount&#x3001;componentDidUpdate &#x548C; componentWillUnmount &#x5177;&#x6709;&#x76F8;&#x540C;&#x7684;&#x7528;&#x9014;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x88AB;&#x5408;&#x5E76;&#x6210;&#x4E86;&#x4E00;&#x4E2A; API&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x5B9E;&#x73B0;&#x4E24;&#x4E2A;&#x529F;&#x80FD;&#xFF1A;</p>
+<ol>
+<li>&#x5728;title&#x4E0A;&#x9762;&#x663E;&#x793A;&#x70B9;&#x51FB;&#x6B21;&#x6570;</li>
+<li>&#x8BA2;&#x9605;&#x597D;&#x53CB;&#x5728;&#x7EBF;&#x72B6;&#x6001;&#xFF0C;&#x5E76;&#x5728;&#x5B9E;&#x73B0;&#x53D6;&#x6D88;&#x8BA2;&#x9605;&#x529F;&#x80FD;</li>
+</ol>
+<pre><code class="lang-react">import React, { useState, useEffect } from &apos;react&apos;;
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() =&gt; {
+    // &#x5BF9;&#x5E94;&#x7C7B;&#x5B9E;&#x73B0; componentDidMount &#x548C; componentDidUpdate
+    document.title = `You clicked ${count} times`;
+  });
+
+  useEffect(() =&gt; {
+    function handleStatusChange(status) {
+      setIsOnline(status.isOnline);
+    }
+    // &#x5BF9;&#x5E94;&#x7C7B;&#x5B9E;&#x73B0; componentDidMount &#x548C; componentWillUnmount
+    ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);
+    // Specify how to clean up after this effect:
+    return function cleanup() {
+      ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);
+    };
+  });
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;You clicked {count} times&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+        Click me
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<ol>
+<li><p><strong>useEffect &#x505A;&#x4E86;&#x4EC0;&#x4E48;&#xFF1F;</strong> &#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A; Hook&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x544A;&#x8BC9; React &#x7EC4;&#x4EF6;&#x9700;&#x8981;&#x5728;&#x6E32;&#x67D3;&#x540E;&#x6267;&#x884C;&#x67D0;&#x4E9B;&#x64CD;&#x4F5C;&#x3002;React &#x4F1A;&#x4FDD;&#x5B58;&#x4F60;&#x4F20;&#x9012;&#x7684;&#x51FD;&#x6570;&#xFF08;&#x6211;&#x4EEC;&#x5C06;&#x5B83;&#x79F0;&#x4E4B;&#x4E3A; &#x201C;effect&#x201D;&#xFF09;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x6267;&#x884C; DOM &#x66F4;&#x65B0;&#x4E4B;&#x540E;&#x8C03;&#x7528;&#x5B83;&#x3002;</p>
+</li>
+<li><p><strong>useEffect &#x4F1A;&#x5728;&#x6BCF;&#x6B21;&#x6E32;&#x67D3;&#x540E;&#x90FD;&#x6267;&#x884C;&#x5417;&#xFF1F;</strong> &#x662F;&#x7684;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5B83;&#x5728;<strong>&#x7B2C;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#x4E4B;&#x540E;</strong>&#x548C;&#x6BCF;&#x6B21;<strong>&#x66F4;&#x65B0;</strong>&#x4E4B;&#x540E;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#x3002;</p>
+</li>
+<li><p><strong>&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x5728; effect &#x4E2D;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF1F;</strong> &#x8FD9;&#x662F; effect &#x53EF;&#x9009;&#x7684;&#x6E05;&#x9664;&#x673A;&#x5236;&#x3002;&#x6BCF;&#x4E2A; effect &#x90FD;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6E05;&#x9664;&#x51FD;&#x6570;&#xFF08;&#x7C7B;&#x4F3C;componentWillUnmount&#x51FD;&#x6570;&#xFF09;&#x3002;&#x5982;&#x6B64;&#x53EF;&#x4EE5;&#x5C06;&#x6DFB;&#x52A0;&#x548C;&#x79FB;&#x9664;&#x8BA2;&#x9605;&#x7684;&#x903B;&#x8F91;&#x653E;&#x5728;&#x4E00;&#x8D77;&#x3002;&#x5B83;&#x4EEC;&#x90FD;&#x5C5E;&#x4E8E; effect &#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;</p>
+</li>
+<li><p><strong>React &#x4F55;&#x65F6;&#x6E05;&#x9664; effect&#xFF1F;</strong> React &#x4F1A;&#x5728;&#x7EC4;&#x4EF6;&#x5378;&#x8F7D;&#x7684;&#x65F6;&#x5019;&#x6267;&#x884C;&#x6E05;&#x9664;&#x64CD;&#x4F5C;&#x3002;&#x800C;effect &#x5728;&#x6BCF;&#x6B21;&#x6E32;&#x67D3;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#x3002;&#x8FD9;&#x5C31;&#x662F;&#x4E3A;&#x4EC0;&#x4E48; React &#x4F1A;&#x5728;&#x6267;&#x884C;&#x5F53;&#x524D; effect &#x4E4B;&#x524D;&#x5BF9;&#x4E0A;&#x4E00;&#x4E2A; effect &#x8FDB;&#x884C;&#x6E05;&#x9664;&#x3002;</p>
+</li>
+<li><p><strong>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x591A;&#x4E2A;effect&#xFF1F;</strong> &#x5F53;&#x7136;&#x53EF;&#x4EE5;&#x3002;&#x5982;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x591A;&#x4E2A;effect&#x5C01;&#x88C5;&#x4E0D;&#x540C;&#x7684;&#x903B;&#x8F91;&#x3002;</p>
+</li>
+</ol>
+<h5 id="&#x901A;&#x8FC7;&#x8DF3;&#x8FC7;-effect-&#x8FDB;&#x884C;&#x6027;&#x80FD;&#x4F18;&#x5316;">&#x901A;&#x8FC7;&#x8DF3;&#x8FC7; Effect &#x8FDB;&#x884C;&#x6027;&#x80FD;&#x4F18;&#x5316;</h5>
+<p>&#x56E0;&#x4E3A;&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x8981;&#x8FD0;&#x884C; effect&#xFF08;&#x7C7B;&#x4F3C;&#x8FD0;&#x884C;componentDidUpdate&#xFF09;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x5982;&#x679C;&#x72B6;&#x6001;&#x5E76;&#x6CA1;&#x6539;&#x53D8;&#xFF0C;&#x5982;&#x4F55;&#x8BA9;React&#x8DF3;&#x8FC7;effect&#x7684;&#x8C03;&#x7528;&#x5462;&#xFF1F;</p>
+<p>&#x5982;&#x679C;&#x662F;componentDidUpdate&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x5229;&#x7528;prevProps &#x6216; prevState&#xFF1A;</p>
+<pre><code class="lang-react">componentDidUpdate(prevProps, prevState) {
+  if (prevState.count !== this.state.count) {
+    document.title = `You clicked ${this.state.count} times`;
+  }
+}
+</code></pre>
+<p>useEffect&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x8981;&#x5728;&#x8BE5;API&#x4E2D;&#x4F20;&#x5165;&#x7B2C;&#x4E8C;&#x4E2A;&#x6570;&#x7EC4;&#x53C2;&#x6570;&#x5373;&#x53EF;&#xFF1A;</p>
+<pre><code class="lang-javascript">useEffect(() =&gt; {
+  <span class="hljs-built_in">document</span>.title = <span class="hljs-string">`You clicked <span class="hljs-subst">${count}</span> times`</span>;
+}, [count]); <span class="hljs-comment">// &#x4EC5;&#x5728; count &#x66F4;&#x6539;&#x65F6;&#x66F4;&#x65B0;</span>
+
+useEffect(() =&gt; {
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleStatusChange</span>(<span class="hljs-params">status</span>) </span>{
+    setIsOnline(status.isOnline);
+  }
+
+  ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);
+  <span class="hljs-keyword">return</span> () =&gt; {
+    ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);
+  };
+}, [props.friend.id]); <span class="hljs-comment">// &#x4EC5;&#x5728; props.friend.id &#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x91CD;&#x65B0;&#x8BA2;&#x9605;</span>
+</code></pre>
+<p>&#x6570;&#x503C;&#x662F;&#x5168;&#x7B49;&#x7B14;&#x8BB0;&#xFF0C;count1 === count2</p>
+<h5 id="&#x63D0;&#x793A;">&#x63D0;&#x793A;</h5>
+<p>&#x4E0E; componentDidMount &#x6216; componentDidUpdate &#x4E0D;&#x540C;&#xFF0C;&#x4F7F;&#x7528; useEffect &#x8C03;&#x5EA6;&#x7684; effect &#x4E0D;&#x4F1A;&#x963B;&#x585E;&#x6D4F;&#x89C8;&#x5668;&#x66F4;&#x65B0;&#x5C4F;&#x5E55;&#xFF0C;&#x8FD9;&#x8BA9;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x770B;&#x8D77;&#x6765;&#x54CD;&#x5E94;&#x66F4;&#x5FEB;&#x3002;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;effect &#x4E0D;&#x9700;&#x8981;&#x540C;&#x6B65;&#x5730;&#x6267;&#x884C;&#x3002;</p>
+<p>useEffect &#x58F0;&#x660E;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4F1A;&#x5728;&#x7EC4;&#x4EF6;&#x6302;&#x8F7D;&#x3001;&#x66F4;&#x65B0;&#x3001;&#x5378;&#x8F7D;&#x7684;&#x65F6;&#x5019;&#x6267;&#x884C;&#x3002;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x6BCF;&#x6B21;&#x6E32;&#x67D3;&#x90FD;&#x6267;&#x884C;&#x6240;&#x6709;&#x7684; useEffect &#x56DE;&#x8C03;&#xFF0C;useEffect&#x63D0;&#x4F9B;&#x4E86;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x8BE5;&#x53C2;&#x6570;&#x662F;&#x6570;&#x7EC4;&#x7C7B;&#x578B;&#x3002;&#x53EA;&#x6709;&#x5728;&#x6E32;&#x67D3;&#x65F6;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x503C;&#x53D1;&#x751F;&#x4E86;&#x53D8;&#x5316;&#xFF0C;&#x624D;&#x4F1A;&#x6267;&#x884C;&#x8BE5; useEffect&#x56DE;&#x8C03;&#x3002;<strong>&#x5982;&#x679C;&#x4F20;&#x7684;&#x662F;&#x4E2A;&#x7A7A;&#x6570;&#x7EC4;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5E76;&#x4E0D;&#x4F9D;&#x8D56;&#x4EFB;&#x4F55;&#x5176;&#x5B83;&#x503C;&#xFF0C;&#x56E0;&#x6B64;&#x8FD9;&#x6837;&#x53EA;&#x4F1A;&#x5728;&#x7EC4;&#x4EF6;&#x7B2C;&#x4E00;&#x6B21; Mount &#x540E;&#x548C; Unmount &#x524D;&#x8C03;&#x7528;&#x3002;</strong></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="fiber.html" class="navigation navigation-prev " aria-label="Previous page: 5.Fiber">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="performance-optimization.html" class="navigation navigation-next " aria-label="Next page: 7.性能优化">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6.React Hook","level":"1.3.6","depth":2,"next":{"title":"7.性能优化","level":"1.3.7","depth":2,"path":"chapter-senior/performance-optimization.md","ref":"chapter-senior/performance-optimization.md","articles":[]},"previous":{"title":"5.Fiber","level":"1.3.5","depth":2,"path":"chapter-senior/fiber.md","ref":"chapter-senior/fiber.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter-senior/hook.md","mtime":"2019-11-14T03:09:33.275Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-25T13:17:14.621Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
